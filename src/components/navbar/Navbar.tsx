@@ -63,7 +63,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <div style={{ position: "relative" }} onClick={handleOpen}>
         <AiOutlineShoppingCart id="cart" fill="#FFFFFF" size={27} />
         {!products.length ? null : (
