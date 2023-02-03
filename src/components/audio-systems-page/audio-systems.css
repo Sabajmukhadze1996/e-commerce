@@ -1,0 +1,61 @@
+.audio-systems-card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    row-gap: 2rem;
+    column-gap: 4rem;
+    justify-content: center;
+  }
+  
+  #audio-systems-card {
+    width: 250px !important;
+    padding-bottom: 11px !important;
+    padding-top: 11px !important;
+  }
+  
+  @media (max-width: 1251px) {
+    .audio-systems-card-container {
+      grid-template-columns: repeat(3, 250px);
+      row-gap: 2rem;
+      column-gap: 5rem;
+    }
+  }
+  
+  @media (max-width: 935px) {
+    .audio-systems-card-container {
+      grid-template-columns: repeat(3, 250px);
+      row-gap: 2rem;
+      column-gap: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 843px) {
+    .audio-systems-card-container {
+      grid-template-columns: repeat(2, 250px);
+      row-gap: 2rem;
+      column-gap: 5.5rem;
+    }
+  }
+  @media (max-width: 629px) {
+    .audio-systems-card-container {
+      grid-template-columns: repeat(1, 250px);
+      row-gap: 2rem;
+      column-gap: 5.5rem;
+      justify-items: center;
+    }
+    #audio-systems-card {
+      width: 400px !important;
+    }
+  }
+  @media (max-width: 423px) {
+    .audio-systems-card-container {
+      grid-template-columns: repeat(1, 250px);
+      row-gap: 2rem;
+      column-gap: 5.5rem;
+      justify-items: center;
+    }
+    #audio-systems-card {
+      width: 300px !important;
+    }
+  }
+  

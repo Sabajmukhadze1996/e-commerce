@@ -1,0 +1,38 @@
+@font-face {
+  font-family: nav-font;
+  src: url("../../fonts/bpgmrgvlovani.woff");
+}
+
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-family: nav-font !important;
+  letter-spacing: 0.6px !important;
+}
+
+li .nav-link {
+  color: #ffffff !important;
+  font-size: 0.8rem !important;
+  font-family: nav-font !important;
+  letter-spacing: 0.8px !important;
+}
+
+.navbar li .nav-link.active {
+  background-color: seashell !important;
+  color: black !important
+}
+
+
+
+#cart {
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+
+   .container-fluid {
+     padding-left: 0 !important;
+     padding-right: 0 !important;
+   }
+}
