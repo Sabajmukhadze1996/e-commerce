@@ -12,16 +12,18 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "90%",
+  width: '550px',
   bgcolor: "seashell",
   boxShadow: 24,
   p: 2,
   outline: "none",
-  borderRadius: "4px",
+  borderRadius: "7px",
   overflowY: "scroll",
   maxHeight: "60vh",
+  '@media (max-width: 585px)': {
+    width: '95%',
+  },
 };
-
 export default function CartModal({ open, handleClose }: any) {
 
   const dispatch = useDispatch();
@@ -49,7 +51,7 @@ export default function CartModal({ open, handleClose }: any) {
             &nbsp;
             &nbsp;
             &nbsp;
-            <AiOutlineShoppingCart size={35} />
+            <AiOutlineShoppingCart size={35} fill="#1b3b6b" />
           </div>
 
           { products.length > 0 ?
@@ -69,7 +71,7 @@ export default function CartModal({ open, handleClose }: any) {
                         <li className="list-group-item"><strong>{content.price}: </strong>$ {product.price}</li>
                       </ul>
                       <p className="card-text mt-3"><small className="text-muted">{content.update_text} !</small></p>
-                      <button className="btn btn-danger btn-sm" onClick={() => handleRemove(product.brand)}>{content.remove_product}</button>
+                      <button style={{borderRadius: "100px", height: "2.4rem"}} className="btn btn-danger" onClick={() => handleRemove(product.brand)}>{content.remove_product}</button>
                     </div>
                   </div>
                 </div>

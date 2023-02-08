@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext } from "react";
 import { Translation } from "../../translation/TranslationContextProvider";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -14,7 +14,7 @@ import { add } from "../../redux/slices/cartSlice";
 
 import "./basic-card.css";
 
-import data from "../../data/HomePageAllSmartPhones/data"
+import data from "../../data/HomePageAllSmartPhones/data";
 
 export default function BasicCard() {
   const [filteredData, setFilteredData] = React.useState(data);
@@ -28,16 +28,13 @@ export default function BasicCard() {
     setFilteredData(filtered);
   };
 
-
   const dispatch = useDispatch();
 
   const handleAdd = (product: any) => {
     dispatch(add(product));
   };
 
-
   const { content } = useContext(Translation);
-
 
   return (
     <div className="basic-card-container">
@@ -58,6 +55,7 @@ export default function BasicCard() {
               alt="green iguana"
               height="110px"
               image={phone?.image}
+              id="basic-card-img"
             />
             <CardContent>
               <Typography
@@ -66,7 +64,7 @@ export default function BasicCard() {
                 component="div"
                 style={{ width: "100%" }}
               >
-              {content.brand}: {phone.brand}
+                {content.brand}: <span style={{color: "#172585"}}>{phone.brand}</span>
               </Typography>
               <Typography
                 gutterBottom
@@ -74,7 +72,7 @@ export default function BasicCard() {
                 component="div"
                 style={{ width: "100%" }}
               >
-              {content.price}: $ {phone.price}
+                {content.price}: <span style={{color: '#f0120e'}}>$ {phone.price}</span>
               </Typography>
               <li
                 style={{
@@ -83,7 +81,8 @@ export default function BasicCard() {
                   padding: "0 3px",
                 }}
               >
-                <strong>{content.model}:</strong> <span style={{fontWeight: "600"}}>{phone.model}</span> 
+                <strong>{content.model}:</strong>{" "}
+                <span style={{ fontWeight: "600" }}>{phone.model}</span>
               </li>
             </CardContent>
             <CardActions
@@ -106,7 +105,10 @@ export default function BasicCard() {
                 to={"/smartphones-details"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                <Button size="small" style={{ background: "#343a40" }}>
+                <Button
+                  size="small"
+                  style={{ background: "#343a40", borderRadius: "100px" }}
+                >
                   <span
                     style={{
                       color: "#FFFFFF",
@@ -119,9 +121,10 @@ export default function BasicCard() {
                   </span>
                 </Button>
               </NavLink>
-              <Button size="small" style={{ background: "#28a745" }}
-              onClick={() => handleAdd(phone)}
-              
+              <Button
+                size="small"
+                style={{ background: "#0073e6", borderRadius: "100px"  }}
+                onClick={() => handleAdd(phone)}
               >
                 <span
                   style={{

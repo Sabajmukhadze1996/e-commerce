@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+#basic-card-img:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
 #basic-card {
   width: 250px !important;
   padding-bottom: 11px !important;

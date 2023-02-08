@@ -56,6 +56,7 @@ export default function AudioSystemsPage() {
               alt="green iguana"
               height="110px"
               image={phone?.image}
+              id="basic-card-img"
             />
             <CardContent>
               <Typography
@@ -64,7 +65,7 @@ export default function AudioSystemsPage() {
                 component="div"
                 style={{ width: "100%" }}
               >
-               {content.brand}: {phone.brand}
+              {content.brand}: <span style={{color: "#172585"}}>{phone.brand}</span>
               </Typography>
               <Typography
                 gutterBottom
@@ -72,7 +73,7 @@ export default function AudioSystemsPage() {
                 component="div"
                 style={{ width: "100%" }}
               >
-               {content.price}: $ {phone.price}
+               {content.price}: <span style={{color: '#f0120e'}}>$ {phone.price}</span>
               </Typography>
               <li
                 style={{
@@ -103,7 +104,7 @@ export default function AudioSystemsPage() {
                 to={"/audio-systems-details-page"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                <Button size="small" style={{ background: "#343a40" }}>
+                <Button size="small" style={{ background: "#343a40", borderRadius: "100px" }}>
                   <span
                     style={{
                       color: "#FFFFFF",
@@ -116,7 +117,7 @@ export default function AudioSystemsPage() {
                   </span>
                 </Button>
               </NavLink>
-              <Button size="small" style={{ background: "#28a745" }}
+              <Button size="small" style={{ background: "#0073e6", borderRadius: "100px" }}
               onClick={() => handleAdd(phone)}
               >
                 <span

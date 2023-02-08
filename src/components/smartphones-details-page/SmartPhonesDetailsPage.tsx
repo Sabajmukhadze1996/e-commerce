@@ -37,52 +37,52 @@ const SmartPhonesDetailsPage = () => {
                 <span className="text-dark">
                   <strong>{content.brand}:</strong>
                 </span>{" "}
-                {brand}
+                <span style={{color: "#172585", textTransform: "uppercase"}}>{brand}</span>
               </h5>
               <ul className="list-group">
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.price}:</strong> $ {price}
+                    <strong style={{color: "#172585"}}>{content.price}:</strong> $ {price}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.model}:</strong> {model}
+                    <strong style={{color: "#172585"}}>{content.model}:</strong> {model}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.resolution}:</strong> {resolution}
+                    <strong style={{color: "#172585"}}>{content.resolution}:</strong> {resolution}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.ram_memory}:</strong> {ram_memory} GB
+                    <strong style={{color: "#172585"}}>{content.ram_memory}:</strong> {ram_memory} GB
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.features}:</strong> {refresh_rate}
+                    <strong style={{color: "#172585"}}>{content.features}:</strong> {refresh_rate}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.bluetooth}:</strong> {bluetooth}
+                    <strong style={{color: "#172585"}}>{content.bluetooth}:</strong> {bluetooth}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.display_size}:</strong> {display_size} INCH
+                    <strong style={{color: "#172585"}}>{content.display_size}:</strong> {display_size} INCH
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.audio_jack}:</strong> {audio_jack ? "YES" : "NO"}
+                    <strong style={{color: "#172585"}}>{content.audio_jack}:</strong> {audio_jack ? "YES" : "NO"}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.video_card}:</strong> {video_card_model}
+                    <strong style={{color: "#172585"}}>{content.video_card}:</strong> {video_card_model}
                   </span>
                 </li>
               </ul>
@@ -91,14 +91,14 @@ const SmartPhonesDetailsPage = () => {
 
           <NavLink
             style={{
-              width: "145px",
-              height: "2rem",
+              width: "166px",
+              height: "2.5rem",
               display: "flex",
               justifyContent: "center",
               alignItems:"center",
               margin: "1rem",
-              borderRadius: "4px",
-              backgroundColor: "#007bff",
+              borderRadius: "100px",
+              backgroundColor: "#172585",
             }}
             to={"/"}
           >

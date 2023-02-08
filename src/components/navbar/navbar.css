@@ -4,6 +4,10 @@
 }
 
 
+.navbar {
+  background-color: #1d202b !important;
+}
+
 .navbar-brand {
   color: #ffffff !important;
   font-weight: 700 !important;

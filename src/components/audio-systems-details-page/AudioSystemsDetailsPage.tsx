@@ -34,43 +34,43 @@ const AudioSystemsDetailsPage = () => {
                 <span className="text-dark">
                   <strong>{content.brand}:</strong>
                 </span>{" "}
-                {brand}
+                <span style={{color: "#172585", textTransform: "uppercase"}}>{brand}</span>
               </h5>
               <ul className="list-group">
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.price}:</strong> $ {price}
+                    <strong style={{color: "#172585"}}>{content.price}:</strong> $ {price}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.model}:</strong> {model}
+                    <strong style={{color: "#172585"}}>{content.model}:</strong> {model}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.battery}:</strong> {battery_life}
+                    <strong style={{color: "#172585"}}>{content.battery}:</strong> {battery_life}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.water_resistant}:</strong>{" "}
+                    <strong style={{color: "#172585"}}>{content.water_resistant}:</strong>{" "}
                     {water_resistant ? "YES" : "NO"}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.wireless_range}:</strong> {wireless_range}
+                    <strong style={{color: "#172585"}}>{content.wireless_range}:</strong> {wireless_range}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.bluetooth}:</strong> {bluetooth_version}
+                    <strong style={{color: "#172585"}}>{content.bluetooth}:</strong> {bluetooth_version}
                   </span>
                 </li>
                 <li className="list-group-item text-secondary">
                   <span className="text-dark">
-                    <strong>{content.microphone}:</strong> {microphone ? "YES" : "NO"}
+                    <strong style={{color: "#172585"}}>{content.microphone}:</strong> {microphone ? "YES" : "NO"}
                   </span>
                 </li>
               </ul>
@@ -79,14 +79,14 @@ const AudioSystemsDetailsPage = () => {
 
           <NavLink
             style={{
-              width: "145px",
-              height: "2rem",
+              width: "166px",
+              height: "2.5rem",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems:"center",
               margin: "1rem",
-              borderRadius: "4px",
-              backgroundColor: "#007bff",
+              borderRadius: "100px",
+              backgroundColor: "#172585",
             }}
             to={"/audio-systems"}
           >

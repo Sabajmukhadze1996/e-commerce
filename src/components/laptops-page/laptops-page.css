@@ -6,6 +6,13 @@
     column-gap: 4rem;
     justify-content: center;
   }
+
+
+  #basic-card-img:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+    transition: 0.25s ease-in;
+  }
   
   #laptops-card {
     width: 250px !important;

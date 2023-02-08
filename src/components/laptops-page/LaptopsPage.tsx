@@ -11,10 +11,9 @@ import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "../../redux/slices/cartSlice";
 
-
 import "./laptops-page.css";
 
-import data from "../../data/HomePageAllLaptops/data"
+import data from "../../data/HomePageAllLaptops/data";
 
 export default function LaptopsPage() {
   const [filteredData, setFilteredData] = React.useState(data);
@@ -28,13 +27,11 @@ export default function LaptopsPage() {
     setFilteredData(filtered);
   };
 
-
   const dispatch = useDispatch();
 
   const handleAdd = (product: any) => {
     dispatch(add(product));
   };
-
 
   const { content } = useContext(Translation);
 
@@ -57,6 +54,7 @@ export default function LaptopsPage() {
               alt="green iguana"
               height="110px"
               image={phone?.image}
+              id="basic-card-img"
             />
             <CardContent>
               <Typography
@@ -65,7 +63,7 @@ export default function LaptopsPage() {
                 component="div"
                 style={{ width: "100%" }}
               >
-               {content.brand}: {phone.brand}
+               {content.brand}: <span style={{color: "#172585"}}>{phone.brand}</span>
               </Typography>
               <Typography
                 gutterBottom
@@ -73,7 +71,7 @@ export default function LaptopsPage() {
                 component="div"
                 style={{ width: "100%" }}
               >
-               {content.price}: $ {phone.price}
+                {content.price}: <span style={{color: '#f0120e'}}>$ {phone.price}</span>
               </Typography>
               <li
                 style={{
@@ -106,7 +104,10 @@ export default function LaptopsPage() {
                 to={"/laptops-details-page"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                <Button size="small" style={{ background: "#343a40" }}>
+                <Button
+                  size="small"
+                  style={{ background: "#343a40", borderRadius: "100px" }}
+                >
                   <span
                     style={{
                       color: "#FFFFFF",
@@ -119,9 +120,10 @@ export default function LaptopsPage() {
                   </span>
                 </Button>
               </NavLink>
-              <Button size="small" style={{ background: "#28a745" }}
-              onClick={() => handleAdd(phone)}
-              
+              <Button
+                size="small"
+                style={{ background: "#0073e6", borderRadius: "100px" }}
+                onClick={() => handleAdd(phone)}
               >
                 <span
                   style={{
