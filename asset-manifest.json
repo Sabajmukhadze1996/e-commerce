@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.63cc6061.css",
-    "main.js": "/e-commerce/static/js/main.58d6e0d6.js",
+    "main.css": "/e-commerce/static/css/main.5b985188.css",
+    "main.js": "/e-commerce/static/js/main.fd531f94.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/Bose QuietComfort 35 II Wireless Headphones.webp": "/e-commerce/static/media/Bose QuietComfort 35 II Wireless Headphones.fe6d727a0c3d128de1cb.webp",
     "static/media/Nvidia GeForce MX350.png": "/e-commerce/static/media/Nvidia GeForce MX350.f21c95da379688a40037.png",
@@ -44,11 +44,11 @@
     "static/media/Xiaomi Mi In-Ear Headphones Basic HSEJ03JY Black.png": "/e-commerce/static/media/Xiaomi Mi In-Ear Headphones Basic HSEJ03JY Black.a912d9c1b4461731222e.png",
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
     "index.html": "/e-commerce/index.html",
-    "main.63cc6061.css.map": "/e-commerce/static/css/main.63cc6061.css.map",
-    "main.58d6e0d6.js.map": "/e-commerce/static/js/main.58d6e0d6.js.map"
+    "main.5b985188.css.map": "/e-commerce/static/css/main.5b985188.css.map",
+    "main.fd531f94.js.map": "/e-commerce/static/js/main.fd531f94.js.map"
   },
   "entrypoints": [
-    "static/css/main.63cc6061.css",
-    "static/js/main.58d6e0d6.js"
+    "static/css/main.5b985188.css",
+    "static/js/main.fd531f94.js"
   ]
 }
