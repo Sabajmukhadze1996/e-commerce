@@ -26,7 +26,7 @@ const AudioSystemsDetailsPage = () => {
       >
         <div className="row g-0">
           <div className="col-sm-4">
-            <img src={image} className="img-fluid rounded-start" alt="..." />
+            <img src={image} style={{width: "250px"}} className="rounded-start" alt="..." />
           </div>
           <div className="col-md-8">
             <div className="card-body">
@@ -37,38 +37,38 @@ const AudioSystemsDetailsPage = () => {
                 <span style={{color: "#172585", textTransform: "uppercase"}}>{brand}</span>
               </h5>
               <ul className="list-group">
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.price}:</strong> $ {price}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.model}:</strong> {model}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.battery}:</strong> {battery_life}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.water_resistant}:</strong>{" "}
                     {water_resistant ? "YES" : "NO"}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.wireless_range}:</strong> {wireless_range}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.bluetooth}:</strong> {bluetooth_version}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.microphone}:</strong> {microphone ? "YES" : "NO"}
                   </span>

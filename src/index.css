@@ -5,21 +5,23 @@
 }
 
 body {
-  background-color: #fcf8f4;
+  background-color: #fbf8f6;
+  overflow-x: hidden !important;
 }
 
 .app {
-  max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: hidden !important;
 }
 
 #main {
   flex: 1;
   padding: 1.4rem 1.65rem;
+  padding-top: 6.5rem;
 }
 
 a {

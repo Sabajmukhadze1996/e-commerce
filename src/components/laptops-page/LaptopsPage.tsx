@@ -55,6 +55,7 @@ export default function LaptopsPage() {
               height="110px"
               image={phone?.image}
               id="basic-card-img"
+              style={{objectFit: "contain"}}
             />
             <CardContent>
               <Typography

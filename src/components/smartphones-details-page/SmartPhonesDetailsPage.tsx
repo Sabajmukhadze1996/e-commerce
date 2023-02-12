@@ -29,7 +29,7 @@ const SmartPhonesDetailsPage = () => {
       >
         <div className="row g-0">
           <div className="col-sm-4">
-            <img src={image} className="img-fluid rounded-start" alt="..." />
+            <img src={image} style={{width: "250px"}}  className="rounded-start" alt="..." />
           </div>
           <div className="col-md-8">
             <div className="card-body">
@@ -40,47 +40,47 @@ const SmartPhonesDetailsPage = () => {
                 <span style={{color: "#172585", textTransform: "uppercase"}}>{brand}</span>
               </h5>
               <ul className="list-group">
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.price}:</strong> $ {price}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.model}:</strong> {model}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.resolution}:</strong> {resolution}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.ram_memory}:</strong> {ram_memory} GB
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.features}:</strong> {refresh_rate}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.bluetooth}:</strong> {bluetooth}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.display_size}:</strong> {display_size} INCH
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.audio_jack}:</strong> {audio_jack ? "YES" : "NO"}
                   </span>
                 </li>
-                <li className="list-group-item text-secondary">
+                <li className="list-group-item text-secondary" style={{padding: "0.37rem", fontSize: "0.92rem"}}>
                   <span className="text-dark">
                     <strong style={{color: "#172585"}}>{content.video_card}:</strong> {video_card_model}
                   </span>

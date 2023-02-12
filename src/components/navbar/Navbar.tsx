@@ -14,14 +14,11 @@ const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   const dispatch = useDispatch();
   const products = useSelector((state: any) => state.cart);
-
   const { content } = useContext(Translation);
-
   return (
-    <nav className="navbar navbar-expand-md bg-dark px-3 sticky-top">
+    <nav className="navbar navbar-expand-md bg-dark px-3 ">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           E-commerce
@@ -36,12 +33,13 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
+          {" "}
           <HiBars4
             className="navbar-toggler-icon "
             fill="#FFFFFF"
             style={{ fontSize: 23 }}
           />
-        </button>
+        </button>{" "}
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <TranslationComp />
           <div className="navbar-nav ms-auto">
@@ -63,7 +61,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div style={{ position: "relative" }} onClick={handleOpen}>
+      <div id="cart-container" onClick={handleOpen}>
         <AiOutlineShoppingCart id="cart" fill="#FFFFFF" size={27} />
         {!products.length ? null : (
           <Badge

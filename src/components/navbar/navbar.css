@@ -3,9 +3,74 @@
   src: url("../../fonts/bpgmrgvlovani.woff");
 }
 
-
 .navbar {
   background-color: #1d202b !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  position: fixed !important;
+  width: 100% !important;
+  z-index: 100;
+}
+
+@media (min-width: 1500px) {
+  .navbar {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navbar {
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .navbar {
+    padding-left: 12rem !important;
+    padding-right: 12rem !important;
+  }
+}
+@media (min-width: 1800px) {
+  .navbar {
+    padding-left: 14rem !important;
+    padding-right: 14rem !important;
+  }
+}
+
+@media (min-width: 1900px) {
+  .navbar {
+    padding-left: 16rem !important;
+    padding-right: 16rem !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  .navbar {
+    padding-left: 18rem !important;
+    padding-right: 18rem !important;
+  }
+}
+
+@media (min-width: 2200px) {
+  .navbar {
+    padding-left: 22rem !important;
+    padding-right: 22rem !important;
+  }
+}
+
+@media (min-width: 2300px) {
+  .navbar {
+    padding-left: 26rem !important;
+    padding-right: 26rem !important;
+  }
+}
+@media (min-width: 2300px) {
+  .navbar {
+    padding-left: 28rem !important;
+    padding-right: 28rem !important;
+  }
 }
 
 .navbar-brand {
@@ -13,30 +78,32 @@
   font-weight: 700 !important;
   font-family: nav-font !important;
   letter-spacing: 0.6px !important;
+  font-size: 1.1rem !important;
 }
 
 li .nav-link {
   color: #ffffff !important;
-  font-size: 0.8rem !important;
+  font-size: 0.74rem !important;
   font-family: nav-font !important;
   letter-spacing: 0.8px !important;
 }
 
 .navbar li .nav-link.active {
-  background-color: seashell !important;
-  color: black !important
+  border-bottom: 1px solid seashell;
 }
-
-
 
 #cart {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-@media(max-width: 768px) {
+#cart-container {
+  position: relative !important;
+}
 
-   .container-fluid {
-     padding-left: 0 !important;
-     padding-right: 0 !important;
-   }
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
