@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.5b985188.css",
-    "main.js": "/e-commerce/static/js/main.fd531f94.js",
+    "main.css": "/e-commerce/static/css/main.733e7da5.css",
+    "main.js": "/e-commerce/static/js/main.b7ef1322.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/Bose QuietComfort 35 II Wireless Headphones.webp": "/e-commerce/static/media/Bose QuietComfort 35 II Wireless Headphones.fe6d727a0c3d128de1cb.webp",
     "static/media/Nvidia GeForce MX350.png": "/e-commerce/static/media/Nvidia GeForce MX350.f21c95da379688a40037.png",
@@ -17,18 +17,24 @@
     "static/media/TCL 10 5G UW.jpg": "/e-commerce/static/media/TCL 10 5G UW.9d085c4b1d3924c8bcd5.jpg",
     "static/media/Find X3 Pro.jpg": "/e-commerce/static/media/Find X3 Pro.c15578976d1b263f9137.jpg",
     "static/media/Xiaomi Mi 10 Pro.jpg": "/e-commerce/static/media/Xiaomi Mi 10 Pro.3e121df447bf399760bd.jpg",
+    "static/media/Lenovo Legion 5 82RB00NPRK.jpeg": "/e-commerce/static/media/Lenovo Legion 5 82RB00NPRK.9dd9af3e5466f376cefb.jpeg",
     "static/media/huaweig 30pro.png": "/e-commerce/static/media/huaweig 30pro.377904feba5ac2d9654c.png",
     "static/media/bpgmrgvlovani.woff": "/e-commerce/static/media/bpgmrgvlovani.54216099194c6c3e4f5b.woff",
+    "static/media/Acer Predator Helios 300.jpeg": "/e-commerce/static/media/Acer Predator Helios 300.592fc5f819854d94d81d.jpeg",
     "static/media/Blade Pro.jpg": "/e-commerce/static/media/Blade Pro.851b91292da3d22178d0.jpg",
     "static/media/sony SRS-X11.jpg": "/e-commerce/static/media/sony SRS-X11.bba36377331a60015003.jpg",
     "static/media/Realme 8 Pro.jpeg": "/e-commerce/static/media/Realme 8 Pro.7de44d38011d8af247b4.jpeg",
+    "static/media/Lenovo IdeaPad 1 82QD004QRK.jpeg": "/e-commerce/static/media/Lenovo IdeaPad 1 82QD004QRK.555179b0b3dcd85e2114.jpeg",
     "static/media/Vivo X60 Pro.jpg": "/e-commerce/static/media/Vivo X60 Pro.1bd4bf641a4fd24f1a42.jpg",
     "static/media/Pixel 6 Pro.jpeg": "/e-commerce/static/media/Pixel 6 Pro.447b337c06b0a9c2e515.jpeg",
     "static/media/Xiaomi Mi Smart Speaker QBH4190GL Grey.jpeg": "/e-commerce/static/media/Xiaomi Mi Smart Speaker QBH4190GL Grey.9b5d76df847181874692.jpeg",
+    "static/media/Lenovo V15 Gen 2 82KB003CRU.jpeg": "/e-commerce/static/media/Lenovo V15 Gen 2 82KB003CRU.c50b665bb324e8fd8f68.jpeg",
     "static/media/JBL BoomBox.png": "/e-commerce/static/media/JBL BoomBox.1484c6c4a88413a7252f.png",
     "static/media/SONY SRS-XB12.webp": "/e-commerce/static/media/SONY SRS-XB12.f2d208123988f5c4256d.webp",
+    "static/media/OnePlus Nord CE.jpeg": "/e-commerce/static/media/OnePlus Nord CE.90ab392417d13284f7e0.jpeg",
     "static/media/Xiaomi Mi Outdoor Speaker Blue GL MP QBH4197GL Blue.jpeg": "/e-commerce/static/media/Xiaomi Mi Outdoor Speaker Blue GL MP QBH4197GL Blue.3e649da229aa3873497b.jpeg",
     "static/media/ThinkPad X1 Carbon.jpg": "/e-commerce/static/media/ThinkPad X1 Carbon.43ce770932f49841c35d.jpg",
+    "static/media/Acer Aspire 5 A515-57-594R.jpeg": "/e-commerce/static/media/Acer Aspire 5 A515-57-594R.189f761e08502eb2faca.jpeg",
     "static/media/OnePlus 9 Pro.jpeg": "/e-commerce/static/media/OnePlus 9 Pro.60f1657a2d86e9490ad9.jpeg",
     "static/media/P40 Pro.jpg": "/e-commerce/static/media/P40 Pro.5b110c31cfaa96a861df.jpg",
     "static/media/Nvidia GeForce GTX 1650.jpg": "/e-commerce/static/media/Nvidia GeForce GTX 1650.31cc633a32ddf5e67ef3.jpg",
@@ -37,18 +43,23 @@
     "static/media/Surface Laptop 4.jpeg": "/e-commerce/static/media/Surface Laptop 4.0cda2f84f5341a7bbd5e.jpeg",
     "static/media/OnePlus 6T.png": "/e-commerce/static/media/OnePlus 6T.3533f88093335683cff7.png",
     "static/media/JBL Flip 5.png": "/e-commerce/static/media/JBL Flip 5.533063507c651e8c6586.png",
+    "static/media/Google Pixel 4 LTE.jpeg": "/e-commerce/static/media/Google Pixel 4 LTE.ec809f66cfd50302b1f0.jpeg",
     "static/media/LG Velvet 5G.webp": "/e-commerce/static/media/LG Velvet 5G.96ee31cab23b5b3032c4.webp",
+    "static/media/Apple iPhone 13 Mini.jpeg": "/e-commerce/static/media/Apple iPhone 13 Mini.ad97d3f7fc1558f7f1d1.jpeg",
     "static/media/Google Pixel 3 XL.jpeg": "/e-commerce/static/media/Google Pixel 3 XL.1b8a2ab5bbec24ca2b8e.jpeg",
     "static/media/Mi 11.jpeg": "/e-commerce/static/media/Mi 11.2fd5d3269b9362206de2.jpeg",
     "static/media/Samsung Galaxy S9 Plus.webp": "/e-commerce/static/media/Samsung Galaxy S9 Plus.15c06b9244db1228308b.webp",
+    "static/media/Bose QuietComfort 45 wireless headphones.jpeg": "/e-commerce/static/media/Bose QuietComfort 45 wireless headphones.4ac9743a8a91d013ad05.jpeg",
+    "static/media/Samsung Galaxy A03 A035FD.jpeg": "/e-commerce/static/media/Samsung Galaxy A03 A035FD.cfdf096534919a1bc1b8.jpeg",
     "static/media/Xiaomi Mi In-Ear Headphones Basic HSEJ03JY Black.png": "/e-commerce/static/media/Xiaomi Mi In-Ear Headphones Basic HSEJ03JY Black.a912d9c1b4461731222e.png",
+    "static/media/Bose SoundLink Revolve+ II Bluetooth.jpeg": "/e-commerce/static/media/Bose SoundLink Revolve+ II Bluetooth.923423783f27610d597c.jpeg",
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
     "index.html": "/e-commerce/index.html",
-    "main.5b985188.css.map": "/e-commerce/static/css/main.5b985188.css.map",
-    "main.fd531f94.js.map": "/e-commerce/static/js/main.fd531f94.js.map"
+    "main.733e7da5.css.map": "/e-commerce/static/css/main.733e7da5.css.map",
+    "main.b7ef1322.js.map": "/e-commerce/static/js/main.b7ef1322.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b985188.css",
-    "static/js/main.fd531f94.js"
+    "static/css/main.733e7da5.css",
+    "static/js/main.b7ef1322.js"
   ]
 }
