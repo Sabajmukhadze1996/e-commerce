@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Translation } from "../../translation/TranslationContextProvider";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -10,6 +10,7 @@ import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "../../redux/slices/cartSlice";
+import AddToCartModal from "../add-to-cart-modal/AddToCartModal";
 
 import "./laptops-page.css";
 
@@ -35,128 +36,200 @@ export default function LaptopsPage() {
 
   const { content } = useContext(Translation);
 
+  const [open, setOpen] = React.useState(false);
+  const handleCloseCartAddedModal = () => setOpen(false);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 600);
+  }, []);
+
   return (
-    <div className="laptops-card-container">
-      <div className="filter-container">
-        <input
-          autoFocus={true}
-          placeholder={content.search}
-          className="px-2 form-control"
-          type="text"
-          onChange={(e) => handleFilter(e.target.value)}
-        />
-      </div>
-      {filteredData.length > 0 ? (
-        filteredData.map((phone: any, index: any) => (
-          <Card id="laptops-card" key={index}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="110px"
-              image={phone?.image}
-              id="basic-card-img"
-              style={{objectFit: "contain"}}
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
-                style={{ width: "100%" }}
-              >
-               {content.brand}: <span style={{color: "#172585"}}>{phone.brand}</span>
-              </Typography>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
-                style={{ width: "100%" }}
-              >
-                {content.price}: <span style={{color: '#f0120e'}}>$ {phone.price}</span>
-              </Typography>
-              <li
-                style={{
-                  fontSize: "0.8rem",
-                  listStyle: "none",
-                  padding: "0 3px",
-                }}
-              >
-                <strong>{content.model}:</strong>{" "}
-                <span style={{ fontWeight: "600" }}>{phone.model}</span>
-              </li>
-            </CardContent>
-            <CardActions
-              style={{ justifyContent: "space-between", padding: "0px 10px" }}
-            >
-              <NavLink
-                state={{
-                  brand: phone?.brand,
-                  model: phone?.model,
-                  price: phone?.price,
-                  image: phone?.image,
-                  resolution: phone?.resolution,
-                  ram_memory: phone?.ram_memory,
-                  video_card_model: phone?.video_card_model,
-                  refresh_rate: phone?.refresh_rate,
-                  bluetooth: phone?.bluetooth,
-                  display_size: phone?.display_size,
-                  audio_jack: phone?.audio_jack,
-                }}
-                to={"/laptops-details-page"}
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <Button
-                  size="small"
-                  style={{ background: "#343a40", borderRadius: "100px" }}
-                >
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "0.7rem",
-                      fontWeight: "600",
-                      padding: "0 3px",
-                    }}
-                  >
-                    {content.see_details}
-                  </span>
-                </Button>
-              </NavLink>
-              <Button
-                size="small"
-                style={{ background: "#0073e6", borderRadius: "100px" }}
-                onClick={() => handleAdd(phone)}
-              >
-                <span
-                  style={{
-                    color: "#FFFFFF",
-                    fontSize: "0.7rem",
-                    fontWeight: "600",
-                    padding: "0 3px",
-                  }}
-                >
-                  {content.add_to_cart}
-                </span>
-              </Button>
-            </CardActions>
-          </Card>
-        ))
-      ) : (
+    <>
+      {loading ? (
         <div
-          className="product-not-found"
           style={{
+            height: "32vh",
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
             justifyContent: "center",
-            height: "100%",
+            alignItems: "flex-end",
           }}
         >
-          <div>
-            <Typography variant="h6">{content.product_not_found}</Typography>
-            <MdOutlineRemoveShoppingCart size={40} />
+          <div className="spinner-grow text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-grow text-secondary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-grow text-success" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
+      ) : (
+        <>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "1.5rem",
+            }}
+          >
+            <input
+              autoFocus={true}
+              placeholder={content.search}
+              className="px-3"
+              type="text"
+              onChange={(e) => handleFilter(e.target.value)}
+              style={{
+                width: "310px",
+                outline: "none",
+                borderRadius: "100px",
+                border: "1px solid #d3cece",
+                paddingBlock: "0.3rem",
+              }}
+            />
+          </div>
+          <h5
+            style={{
+              textAlign: "center",
+              marginBottom: "1.5rem",
+              color: "brown",
+              fontWeight: "400",
+            }}
+          >
+            {content.laptops}
+          </h5>
+          <div className="laptops-card-container">
+          <AddToCartModal
+              open={open}
+              setOpen={setOpen}
+              handleCloseCartAddedModal={handleCloseCartAddedModal}
+            />
+            {filteredData.length > 0 ? (
+              filteredData.map((phone: any, index: any) => (
+                <Card id="laptops-card" key={index}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="81px"
+                    image={phone?.image}
+                    id="basic-card-img"
+                    style={{ objectFit: "contain" }}
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                      style={{ width: "100%", fontSize: "0.9rem" }}
+                    >
+                      {content.brand}:{" "}
+                      <span style={{ color: "#172585" }}>{phone.brand}</span>
+                    </Typography>
+                    <Typography
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                      style={{ width: "100%", fontSize: "0.9rem" }}
+                    >
+                      {content.price}:{" "}
+                      <span style={{ color: "#f0120e" }}>$ {phone.price}</span>
+                    </Typography>
+                    <li
+                      style={{
+                        fontSize: "0.8rem",
+                        listStyle: "none",
+                        padding: "0 3px",
+                      }}
+                    >
+                      <strong>{content.model}:</strong>{" "}
+                      <span style={{ fontWeight: "600" }}>{phone.model}</span>
+                    </li>
+                  </CardContent>
+                  <CardActions
+                    style={{
+                      justifyContent: "space-between",
+                      padding: "0px 10px",
+                    }}
+                  >
+                    <NavLink
+                      state={{
+                        brand: phone?.brand,
+                        model: phone?.model,
+                        price: phone?.price,
+                        image: phone?.image,
+                        resolution: phone?.resolution,
+                        ram_memory: phone?.ram_memory,
+                        video_card_model: phone?.video_card_model,
+                        refresh_rate: phone?.refresh_rate,
+                        bluetooth: phone?.bluetooth,
+                        display_size: phone?.display_size,
+                        audio_jack: phone?.audio_jack,
+                      }}
+                      to={"/laptops-details-page"}
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      <Button
+                        size="small"
+                        style={{ background: "#343a40", borderRadius: "100px" }}
+                      >
+                        <span
+                          style={{
+                            color: "#FFFFFF",
+                            fontSize: "0.65rem",
+                            fontWeight: "600",
+                            padding: "0 3px",
+                          }}
+                        >
+                          {content.see_details}
+                        </span>
+                      </Button>
+                    </NavLink>
+                    <Button
+                      size="small"
+                      style={{ background: "#0073e6", borderRadius: "100px" }}
+                      onClick={() => {handleAdd(phone); setOpen(true)}}
+                    >
+                      <span
+                        style={{
+                          color: "#FFFFFF",
+                          fontSize: "0.65rem",
+                          fontWeight: "600",
+                          padding: "0 3px",
+                        }}
+                      >
+                        {content.add_to_cart}
+                      </span>
+                    </Button>
+                  </CardActions>
+                </Card>
+              ))
+            ) : (
+              <div
+                className="product-not-found"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "100%",
+                }}
+              >
+                <div>
+                  <Typography variant="h6">
+                    {content.product_not_found}
+                  </Typography>
+                  <MdOutlineRemoveShoppingCart size={40} />
+                </div>
+              </div>
+            )}
+          </div>
+        </>
       )}
-    </div>
+    </>
   );
 }

@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(4, 250px);
     row-gap: 2rem;
-    column-gap: 4rem;
+    column-gap: 2rem;
     justify-content: center;
   }
 
@@ -14,7 +14,7 @@
   }
   
   #audio-systems-card {
-    width: 250px !important;
+    width: 230px !important;
     padding-bottom: 11px !important;
     padding-top: 11px !important;
   }
