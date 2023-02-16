@@ -190,7 +190,7 @@ const SmartPhonesDetailsPage = () => {
                 borderRadius: "100px",
                 backgroundColor: "#172585",
               }}
-              to={"/"}
+              to={"/smartphones"}
             >
               <span className="text-white">{content.go_back}</span>
             </NavLink>

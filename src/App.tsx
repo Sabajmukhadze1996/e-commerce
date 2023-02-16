@@ -2,6 +2,7 @@ import React from "react";
 import BasicCard from "./components/basic-card/BasicCard";
 import Navbar from "./components/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
+import HomePage from "./components/homepage/accessories/HomePage";
 import SmartPhonesDetailsPage from "./components/smartphones-details-page/SmartPhonesDetailsPage";
 import LaptopsPage from "./components/laptops-page/LaptopsPage";
 import LaptopsDetailsPage from "./components/laptops-details-page/LaptopsDetailsPage";
@@ -16,7 +17,11 @@ const App: React.FC = () => {
       <main id="main">
         <Routes>
           <Route>
-            <Route path="/*" element={<BasicCard />} />
+            <Route path="/*" element={<HomePage />} />
+          </Route>
+
+          <Route>
+            <Route path="/smartphones" element={<BasicCard />} />
             <Route
               path="/smartphones-details"
               element={<SmartPhonesDetailsPage />}

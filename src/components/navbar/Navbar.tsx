@@ -45,6 +45,11 @@ const Navbar = () => {
           <div className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink className="nav-link " to="/">
+                {content.home}
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link " to="/smartphones">
                 {content.smartphones}
               </NavLink>
             </li>
@@ -72,7 +77,6 @@ const Navbar = () => {
           ></Badge>
         )}
       </div>
-
       <CartModal open={open} handleClose={handleClose} />
     </nav>
   );
