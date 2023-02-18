@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.21b513d4.css",
-    "main.js": "/e-commerce/static/js/main.8a9e1dc4.js",
+    "main.css": "/e-commerce/static/css/main.6762c21d.css",
+    "main.js": "/e-commerce/static/js/main.a9736a49.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/nikon-z7ii.jpg": "/e-commerce/static/media/nikon-z7ii.88662b816d4028a6304c.jpg",
     "static/media/Bose QuietComfort 35 II Wireless Headphones.webp": "/e-commerce/static/media/Bose QuietComfort 35 II Wireless Headphones.fe6d727a0c3d128de1cb.webp",
@@ -11,6 +11,7 @@
     "static/media/Nokia 5.4.png": "/e-commerce/static/media/Nokia 5.4.b342b975a57ec260da4f.png",
     "static/media/olympus-omd-em1-iii.jpeg": "/e-commerce/static/media/olympus-omd-em1-iii.cedd35a60d1e73b59970.jpeg",
     "static/media/Galaxy S21 Ultra 5G.png": "/e-commerce/static/media/Galaxy S21 Ultra 5G.f7b5974155d7396f3358.png",
+    "static/media/my-app-bg.png": "/e-commerce/static/media/my-app-bg.3b455ce7a62c1aa8e482.png",
     "static/media/Oppo Find X2 Pro.jpg": "/e-commerce/static/media/Oppo Find X2 Pro.ca6e2387727f12b25991.jpg",
     "static/media/Bose SoundLink Mini II.jpg": "/e-commerce/static/media/Bose SoundLink Mini II.2b2db1d5ab7d4c3f12f7.jpg",
     "static/media/Watch Series 6.png": "/e-commerce/static/media/Watch Series 6.259502b532812e0e1481.png",
@@ -73,11 +74,11 @@
     "static/media/Bose SoundLink Revolve+ II Bluetooth.jpeg": "/e-commerce/static/media/Bose SoundLink Revolve+ II Bluetooth.923423783f27610d597c.jpeg",
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
     "index.html": "/e-commerce/index.html",
-    "main.21b513d4.css.map": "/e-commerce/static/css/main.21b513d4.css.map",
-    "main.8a9e1dc4.js.map": "/e-commerce/static/js/main.8a9e1dc4.js.map"
+    "main.6762c21d.css.map": "/e-commerce/static/css/main.6762c21d.css.map",
+    "main.a9736a49.js.map": "/e-commerce/static/js/main.a9736a49.js.map"
   },
   "entrypoints": [
-    "static/css/main.21b513d4.css",
-    "static/js/main.8a9e1dc4.js"
+    "static/css/main.6762c21d.css",
+    "static/js/main.a9736a49.js"
   ]
 }
