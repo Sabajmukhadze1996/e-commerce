@@ -12,7 +12,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: "300px",
   height: "145px",
-  bgcolor: "seashell",
+  bgcolor: "#FFFFFF",
   boxShadow: 24,
   p: 2,
   outline: "none",

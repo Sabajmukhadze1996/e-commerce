@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import TranslationComp from "../../translation/TranslationComponent";
 import { Translation } from "../../translation/TranslationContextProvider";
+import Logout from "../logout/Logout";
 
 const Navbar = () => {
   //  cart modal
@@ -19,10 +20,13 @@ const Navbar = () => {
   const { content } = useContext(Translation);
   return (
     <nav className="navbar navbar-expand-md bg-dark px-3 ">
-      <div className="container-fluid">
+      <div className="container-fluid px-0">
         <a className="navbar-brand" href="#">
-          E-commerce
+          Ecommerce
         </a>
+        <Logout />
+        &nbsp;
+        &nbsp;
         <button
           style={{ color: "transparent" }}
           className="navbar-toggler"

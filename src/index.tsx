@@ -8,6 +8,7 @@ import store from "./redux/store/store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import TranslationContextProvider from "./translation/TranslationContextProvider";
+import SignUpContextProvider from "./components/signup/SignUpContextProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -17,9 +18,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <TranslationContextProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <SignUpContextProvider>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </SignUpContextProvider>
       </TranslationContextProvider>
     </BrowserRouter>
   </React.StrictMode>

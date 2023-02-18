@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SignupContext } from "./components/signup/SignUpContextProvider";
 import BasicCard from "./components/basic-card/BasicCard";
 import Navbar from "./components/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
@@ -9,42 +10,51 @@ import LaptopsDetailsPage from "./components/laptops-details-page/LaptopsDetails
 import AudioSystemsPage from "./components/audio-systems-page/AudioSystemsPage";
 import AudioSystemsDetailsPage from "./components/audio-systems-details-page/AudioSystemsDetailsPage";
 import { Footer } from "./components/footer/Footer";
+import Signup from "./components/signup/Signup";
 
 const App: React.FC = () => {
-  return (
-    <div className="app">
-      <Navbar />
-      <main id="main">
-        <Routes>
-          <Route>
-            <Route path="/*" element={<HomePage />} />
-          </Route>
+  const { isSubmitted } = useContext(SignupContext);
 
-          <Route>
-            <Route path="/smartphones" element={<BasicCard />} />
-            <Route
-              path="/smartphones-details"
-              element={<SmartPhonesDetailsPage />}
-            />
-          </Route>
-          <Route>
-            <Route path="/laptops-page" element={<LaptopsPage />} />
-            <Route
-              path="/laptops-details-page"
-              element={<LaptopsDetailsPage />}
-            />
-          </Route>
-          <Route>
-            <Route path="/audio-systems" element={<AudioSystemsPage />} />
-            <Route
-              path="/audio-systems-details-page"
-              element={<AudioSystemsDetailsPage />}
-            />
-          </Route>
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+  return (
+    <>
+      {isSubmitted ? (
+        <div className="app">
+          <Navbar />
+          <main id="main">
+            <Routes>
+              <Route>
+                <Route path="/*" element={<HomePage />} />
+              </Route>
+
+              <Route>
+                <Route path="/smartphones" element={<BasicCard />} />
+                <Route
+                  path="/smartphones-details"
+                  element={<SmartPhonesDetailsPage />}
+                />
+              </Route>
+              <Route>
+                <Route path="/laptops-page" element={<LaptopsPage />} />
+                <Route
+                  path="/laptops-details-page"
+                  element={<LaptopsDetailsPage />}
+                />
+              </Route>
+              <Route>
+                <Route path="/audio-systems" element={<AudioSystemsPage />} />
+                <Route
+                  path="/audio-systems-details-page"
+                  element={<AudioSystemsDetailsPage />}
+                />
+              </Route>
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      ) : (
+        <Signup />
+      )}
+    </>
   );
 };
 

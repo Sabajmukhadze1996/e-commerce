@@ -5,11 +5,11 @@
 
 .navbar {
   background-color: #1d202b !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
   position: fixed !important;
   width: 100% !important;
-  z-index: 100;
+  z-index: 100 !important;
 }
 
 @media (min-width: 1500px) {
@@ -83,7 +83,7 @@
 
 li .nav-link {
   color: #ffffff !important;
-  font-size: 0.74rem !important;
+  font-size: 0.72rem !important;
   font-family: nav-font !important;
   letter-spacing: 0.8px !important;
 }
