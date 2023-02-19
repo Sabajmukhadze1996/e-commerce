@@ -50,7 +50,7 @@ const AudioSystemsDetailsPage = () => {
       ) : (
         <div
           className="card mb-3"
-          style={{ maxWidth: "840px", margin: "0 auto" }}
+          style={{ maxWidth: "840px", margin: "20px auto" }}
         >
           <div className="row g-0">
             <div className="col-sm-4">

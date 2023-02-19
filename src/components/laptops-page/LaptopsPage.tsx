@@ -76,6 +76,7 @@ export default function LaptopsPage() {
               alignItems: "center",
               justifyContent: "center",
               marginBottom: "1.5rem",
+              marginTop: "20px",
             }}
           >
             <input

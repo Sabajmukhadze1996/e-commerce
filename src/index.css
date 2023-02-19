@@ -4,11 +4,9 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: #fcfcf9;
   overflow-x: hidden !important;
-
 }
 
 .app {
@@ -18,15 +16,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow-x: hidden !important;
+
 }
 
 #main {
   flex: 1;
   padding: 1.4rem 1.65rem;
-  padding-top: 6.5rem;
+  padding-top: 4.75rem;
 }
 
 a {
   text-decoration: none !important;
 }
-

@@ -11,9 +11,10 @@ import AudioSystemsPage from "./components/audio-systems-page/AudioSystemsPage";
 import AudioSystemsDetailsPage from "./components/audio-systems-details-page/AudioSystemsDetailsPage";
 import { Footer } from "./components/footer/Footer";
 import Signup from "./components/signup/Signup";
+import { FaUserCircle } from "react-icons/fa"
 
 const App: React.FC = () => {
-  const { isSubmitted } = useContext(SignupContext);
+  const { isSubmitted,  userName } = useContext(SignupContext);
 
   return (
     <>
@@ -21,6 +22,21 @@ const App: React.FC = () => {
         <div className="app">
           <Navbar />
           <main id="main">
+
+
+          <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "1rem"}}>
+             <div style={{maxWidth: "1410px", width: "100%", height: "30px"}}>
+              <FaUserCircle size={23} color="#1d202b"/>
+              &nbsp;
+            {userName.substring(0, 12)}...
+             </div>
+          </div>
+
+
+
+
+
+
             <Routes>
               <Route>
                 <Route path="/*" element={<HomePage />} />
