@@ -1,15 +1,22 @@
+@font-face {
+  font-family: footer-font;
+  src: url("../../fonts/bpgmrgvlovani.woff");
+}
+
 footer {
     color: #fff5ee;
     padding-bottom: 0.7rem;
     padding-left: 0.4rem;
     padding-right: 0.4rem;
     width: 100%;
-    background-color: #1d202b !important;
+    background-color: #121212f9;
+
   }
   
-  footer a {
+  footer span{
     color: #fff5ee !important;
     cursor: pointer;
+    font-family: footer-font;
   }
   
   #footer-link-linkedin {

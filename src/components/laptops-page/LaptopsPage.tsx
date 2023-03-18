@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
+import { BiSearch } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "../../redux/slices/cartSlice";
@@ -79,18 +80,19 @@ export default function LaptopsPage() {
               marginTop: "20px",
             }}
           >
+            <BiSearch size={20} style={{position: "relative", left: "30px", top: "1.9px"}}/>
             <input
               autoFocus={true}
               placeholder={content.search}
-              className="px-3"
               type="text"
               onChange={(e) => handleFilter(e.target.value)}
               style={{
-                width: "310px",
+                maxWidth: "400px",
+                width: "100%",
                 outline: "none",
-                borderRadius: "100px",
                 border: "1px solid #d3cece",
-                paddingBlock: "0.3rem",
+                paddingBlock: "0.34rem",
+                paddingLeft: "2.3rem"
               }}
             />
           </div>

@@ -31,7 +31,7 @@ const SignUpContextProvider = ({ children }: any) => {
       setPasswordErrorText("");
       setFormErrorText("");
       setIsSubmitted(true);
-      // Here you can handle the successful form submission
+      handleRegistration()
     }
   };
 
@@ -42,6 +42,25 @@ const SignUpContextProvider = ({ children }: any) => {
       setFormErrorText("");
     }
   }, [userName, password]);
+
+  const [registrationDate, setRegistrationDate] = useState<Date | null>(null);
+
+  const handleRegistration = () => {
+    setRegistrationDate(new Date());
+  };
+
+  const options: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: false,
+  };
+  const formattedDate: string =
+    registrationDate?.toLocaleString([], options) || "";
 
   return (
     <SignupContext.Provider
@@ -56,6 +75,7 @@ const SignUpContextProvider = ({ children }: any) => {
         setPasswordErrorText,
         formErrorText,
         isSubmitted,
+        formattedDate,
         setIsSubmitted,
         handleSubmit,
       }}
