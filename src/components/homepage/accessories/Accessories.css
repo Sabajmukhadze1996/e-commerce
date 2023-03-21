@@ -1,10 +1,14 @@
+@font-face {
+  font-family: nav-font;
+  src: url("../../../fonts/bpgmrgvlovani.woff");
+}
+
 .accessories-container {
   display: grid;
   grid-template-columns: repeat(3, 395px);
   column-gap: 2rem;
   row-gap: 1.5rem;
 }
-
 
 @media (max-width: 1291px) {
   .accessories-container {
@@ -62,13 +66,18 @@
 
   .accessories-card {
     max-width: 310px !important;
+   padding-bottom: 200px;
   }
   .accessories-card {
     display: flex;
-   flex-direction: column;
-   height: 300px !important;
-   width: 100%;
-   padding-bottom: 1rem !important;
+    flex-direction: column;
+    height: 340px !important;
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+  .accessories-card *{
+    position: relative;
+    bottom: 7px;
   }
   .accessories-card-img-container {
     width: 130px;
@@ -79,16 +88,36 @@
   .accessories-card-img {
     object-fit: contain;
   }
+
+  .accessories-cart-btns-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .accessories-cart-left-btn {
+    width: 160px !important;
+  }
+  .accessories-cart-right-btn {
+    width: 160px !important;
+  }
+
 }
 
 .accessories-card {
-  box-shadow: 0px 0px 5px rgb(196, 183, 183);
   max-width: 395px;
-  height: 9rem;
+  height: 10rem;
   padding: 0.4rem;
   display: flex;
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px rgb(213, 198, 198);
+  cursor: pointer;
+}
+.accessories-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgb(219, 208, 208);
+  transition: 0.5s ease;
 }
 
 .accessories-card-img-container {
@@ -105,4 +134,57 @@
 .accessories-card-descr-container {
   flex: 1;
   padding-inline-start: 1rem;
+}
+
+.accessories-cart-btns-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 10px;
+}
+
+.accessories-cart-left-btn {
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  font-size: 0.67em;
+  width: 100px;
+  height: 2rem;
+  padding-block: 1.1rem;
+  background-image: linear-gradient(to top, #343a40f5, #5a6c7ef5);
+  color: #ffffff;
+  line-height: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: nav-font;
+}
+
+.accessories-cart-left-btn:hover {
+  background-image: linear-gradient(to top, #343a40c3, #5a6c7ec5);
+  color: #ffffff;
+  transition: 0.6s ease;
+}
+
+.accessories-cart-right-btn {
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  font-size: 0.67em;
+  width: 100px;
+  height: 2rem;
+  padding-block: 1.1rem;
+  background-image: linear-gradient(to bottom, #549cfa, #2447ba);
+  color: #ffffff;
+  line-height: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: nav-font;
+}
+
+.accessories-cart-right-btn:hover {
+  background-image: linear-gradient(to bottom, #68a7f8, #3f61d2);
+  color: #ffffff;
+  transition: 2s ease;
 }

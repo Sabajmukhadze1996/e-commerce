@@ -31,7 +31,6 @@ const PhotographyCard = ({}: any) => {
   const [openAddedCartModal, setOpenAddedCartModal] = React.useState(false);
   const handleCloseCartAddedModal = () => setOpenAddedCartModal(false);
 
-
   const { content } = useContext(Translation);
 
   return (
@@ -49,17 +48,17 @@ const PhotographyCard = ({}: any) => {
             <div className="accessories-card-descr-container">
               <h2 style={{ fontSize: "0.83rem" }}>
                 <span style={{ color: "#070739", fontWeight: "400" }}>
-                {content.brand}: {product.brand}
+                  {content.brand}: {product.brand}
                 </span>
               </h2>
               <p style={{ fontSize: "0.9em" }}>
                 <span style={{ color: "#070739", fontWeight: "400" }}>
-                {content.model}: {product.model}
+                  {content.model}: {product.model}
                 </span>
               </p>
               <div style={{ display: "flex" }}>
                 <span style={{ color: "#070739", fontWeight: "400" }}>
-                {content.price}:
+                  {content.price}:
                 </span>
                 &nbsp;
                 <p style={{ fontSize: "0.9em", color: "#28a745" }}>
@@ -77,37 +76,24 @@ const PhotographyCard = ({}: any) => {
                   $ {product.old_price}
                 </p>
               </div>
+              <div className="accessories-cart-btns-container">
               <button
-                style={{
-                  borderRadius: "100px",
-                  outline: "none",
-                  border: "none",
-                  fontSize: "0.7em",
-                  paddingInline: "0.6rem",
-                  paddingBlock: "0.18rem",
-                  backgroundColor: "#343a40",
-                  color: "#FFFFFF",
-                }}
+               className="accessories-cart-left-btn"
                 onClick={() => handleOpenDetailsModal(product)}
               >
                 {content.see_details}
               </button>
-              &nbsp; &nbsp;
+              &nbsp; &nbsp;&nbsp; &nbsp;
               <button
-                style={{
-                  borderRadius: "100px",
-                  outline: "none",
-                  border: "none",
-                  fontSize: "0.7em",
-                  paddingInline: "0.6rem",
-                  paddingBlock: "0.18rem",
-                  backgroundColor: "#0073e6",
-                  color: "#FFFFFF",
+               className="accessories-cart-right-btn"
+                onClick={() => {
+                  handleAdd(product);
+                  setOpenAddedCartModal(true);
                 }}
-                onClick={() => {handleAdd(product); setOpenAddedCartModal(true)}}
               >
                 {content.add_to_cart}
               </button>
+              </div>
             </div>
           </div>
         );

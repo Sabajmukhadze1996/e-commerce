@@ -21,7 +21,6 @@ const WatchesCard = ({}: any) => {
     setOpen(false);
   };
 
-  // redux operation passing object as a payload
   const dispatch = useDispatch();
 
   const handleAdd = (product: any) => {
@@ -44,6 +43,7 @@ const WatchesCard = ({}: any) => {
                 src={product.image}
                 className="accessories-card-img"
                 alt=".."
+                style={{width: "130px", height: "100%"}}
               />
             </div>
             <div className="accessories-card-descr-container">
@@ -77,37 +77,24 @@ const WatchesCard = ({}: any) => {
                   $ {product.old_price}
                 </p>
               </div>
+              <div className="accessories-cart-btns-container">
               <button
-                style={{
-                  borderRadius: "100px",
-                  outline: "none",
-                  border: "none",
-                  fontSize: "0.7em",
-                  paddingInline: "0.6rem",
-                  paddingBlock: "0.18rem",
-                  backgroundColor: "#343a40",
-                  color: "#FFFFFF",
-                }}
+              className="accessories-cart-left-btn"
                 onClick={() => handleOpenDetailsModal(product)}
               >
                 {content.see_details}
               </button>
-              &nbsp; &nbsp;
+              &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
               <button
-                style={{
-                  borderRadius: "100px",
-                  outline: "none",
-                  border: "none",
-                  fontSize: "0.7em",
-                  paddingInline: "0.6rem",
-                  paddingBlock: "0.18rem",
-                  backgroundColor: "#0073e6",
-                  color: "#FFFFFF",
-                }}
+               className="accessories-cart-right-btn"
                 onClick={() => {handleAdd(product); setOpenAddedCartModal(true)}}
               >
                 {content.add_to_cart}
               </button>
+              </div>
             </div>
           </div>
         );
