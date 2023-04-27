@@ -36,7 +36,14 @@ const AccessoriesCard = ({}: any) => {
     <>
       {data.map((product: any, index: any) => {
         return (
-          <div key={index} className="accessories-card">
+          <div
+            style={{
+              backgroundColor:
+                product.available === "yes" ? "transparent" : "#fdf1f2",
+            }}
+            key={index}
+            className="accessories-card"
+          >
             <div className="accessories-card-img-container">
               <img
                 src={product.image}
@@ -46,30 +53,42 @@ const AccessoriesCard = ({}: any) => {
             </div>
             <div className="accessories-card-descr-container">
               <h2 style={{ fontSize: "0.83rem" }}>
-                <span style={{ color: "#070739", fontWeight: "400" }}>
-                  {content.brand}: {product.brand}
+                <span style={{ fontWeight: "400" }}>
+                  <strong style={{ color: "#444" }}>{content.brand}:</strong>{" "}
+                  <span style={{ marginTop: "-19px" }}>{product.brand}</span>
                 </span>
               </h2>
               <p style={{ fontSize: "0.9em" }}>
-                <span style={{ color: "#070739", fontWeight: "400" }}>
-                  {content.model}: {product.model}
+                <span style={{ fontWeight: "400" }}>
+                  <strong style={{ color: "#444" }}>{content.model}:</strong>{" "}
+                  <span style={{ marginTop: "-17px" }}>{product.model}</span>
                 </span>
               </p>
               <div style={{ display: "flex" }}>
-                <span style={{ color: "#070739", fontWeight: "400" }}>
-                  {content.price}:
+                <span style={{ fontWeight: "400" }}>
+                  <strong style={{ color: "#444" }}>{content.price}:</strong>
                 </span>
                 &nbsp;
-                <p style={{ fontSize: "0.9em", color: "#28a745" }}>
+                <p
+                  id="product-new-price"
+                  style={{
+                    fontSize: "0.9em",
+                    color: "#28a745",
+                    marginTop: "3px",
+                    fontWeight: "600",
+                  }}
+                >
                   $ {product.price}
                 </p>
                 &nbsp; &nbsp;
                 <p
+                  id="product-old-price"
                   style={{
                     fontSize: "0.9em",
                     color: "#e31f1f",
                     fontWeight: "500",
                     textDecoration: "line-through",
+                    marginTop: "3px",
                   }}
                 >
                   $ {product.old_price}
@@ -82,19 +101,25 @@ const AccessoriesCard = ({}: any) => {
                 >
                   {content.see_details}
                 </button>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                <button
-                  className="accessories-cart-right-btn"
-                  onClick={() => {
-                    handleAdd(product);
-                    setOpenAddedCartModal(true);
-                  }}
-                >
-                  {content.add_to_cart}
-                </button>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                {product.available === "no" ? (
+                  <button
+                    style={{ backgroundColor: "#ec0f0f" }}
+                    className="accessories-cart-right-btn"
+                  >
+                    {content.will_be_added_soon}!
+                  </button>
+                ) : (
+                  <button
+                    className="accessories-cart-right-btn"
+                    onClick={() => {
+                      handleAdd(product);
+                      setOpenAddedCartModal(true);
+                    }}
+                  >
+                    {content.add_to_cart}
+                  </button>
+                )}
               </div>
             </div>
           </div>

@@ -62,9 +62,11 @@ export default function LaptopsPage() {
           <div className="spinner-grow text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
+          &nbsp;&nbsp;&nbsp;
           <div className="spinner-grow text-secondary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
+          &nbsp;&nbsp;&nbsp;
           <div className="spinner-grow text-success" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
@@ -80,23 +82,28 @@ export default function LaptopsPage() {
               marginTop: "20px",
             }}
           >
-            <BiSearch size={20} style={{position: "relative", left: "30px", top: "1.9px"}}/>
+            <BiSearch
+              size={20}
+              style={{ position: "relative", left: "50px", top: "1.9px" }}
+            />
             <input
               autoFocus={true}
               placeholder={content.search}
               type="text"
               onChange={(e) => handleFilter(e.target.value)}
               style={{
-                maxWidth: "400px",
+                maxWidth: "550px",
                 width: "100%",
                 outline: "none",
                 border: "1px solid #d3cece",
-                paddingBlock: "0.34rem",
-                paddingLeft: "2.3rem"
+                paddingBlock: "0.8rem",
+                paddingLeft: "3.6rem",
+                borderRadius: "30px"
               }}
             />
           </div>
           <h5
+           className="laptops-page-title"
             style={{
               textAlign: "center",
               marginBottom: "1.5rem",
@@ -107,7 +114,7 @@ export default function LaptopsPage() {
             {content.laptops}
           </h5>
           <div className="laptops-card-container">
-          <AddToCartModal
+            <AddToCartModal
               open={open}
               setOpen={setOpen}
               handleCloseCartAddedModal={handleCloseCartAddedModal}
@@ -118,7 +125,7 @@ export default function LaptopsPage() {
                   <CardMedia
                     component="img"
                     alt="green iguana"
-                    height="81px"
+                    height="100px"
                     image={phone?.image}
                     id="basic-card-img"
                     style={{ objectFit: "contain" }}
@@ -128,7 +135,11 @@ export default function LaptopsPage() {
                       gutterBottom
                       variant="h6"
                       component="div"
-                      style={{ width: "100%", fontSize: "0.9rem" }}
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        fontSize: "0.8rem",
+                      }}
                     >
                       {content.brand}:{" "}
                       <span style={{ color: "#172585" }}>{phone.brand}</span>
@@ -137,21 +148,37 @@ export default function LaptopsPage() {
                       gutterBottom
                       variant="h6"
                       component="div"
-                      style={{ width: "100%", fontSize: "0.9rem" }}
-                    >
-                      {content.price}:{" "}
-                      <span style={{ color: "#f0120e" }}>$ {phone.price}</span>
-                    </Typography>
-                    <li
                       style={{
+                        width: "100%",
+                        fontWeight: "bold",
                         fontSize: "0.8rem",
-                        listStyle: "none",
-                        padding: "0 3px",
                       }}
                     >
-                      <strong>{content.model}:</strong>{" "}
-                      <span style={{ fontWeight: "600" }}>{phone.model}</span>
-                    </li>
+                      {content.price}:{" "}
+                      <span style={{ color: "#28a745" }}>${phone.price}</span>
+                      &nbsp;
+                      <span
+                        style={{
+                          color: "#e31f1f",
+                          textDecorationLine: "line-through",
+                        }}
+                      >
+                        ${phone.old_price}
+                      </span>
+                    </Typography>
+
+                    <Typography
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                      style={{
+                        width: "100%",
+                        fontWeight: "bold",
+                        fontSize: "0.8rem",
+                      }}
+                    >
+                      {content.model}: <span>{phone.model}</span>
+                    </Typography>
                   </CardContent>
                   <CardActions
                     style={{
@@ -176,10 +203,7 @@ export default function LaptopsPage() {
                       to={"/laptops-details-page"}
                       onClick={() => window.scrollTo(0, 0)}
                     >
-                      <Button
-                        size="small"
-                        style={{ background: "#343a40", borderRadius: "100px" }}
-                      >
+                      <Button className="left-btn" size="small">
                         <span
                           style={{
                             color: "#FFFFFF",
@@ -193,9 +217,12 @@ export default function LaptopsPage() {
                       </Button>
                     </NavLink>
                     <Button
+                      className="right-btn"
                       size="small"
-                      style={{ background: "#0073e6", borderRadius: "100px" }}
-                      onClick={() => {handleAdd(phone); setOpen(true)}}
+                      onClick={() => {
+                        handleAdd(phone);
+                        setOpen(true);
+                      }}
                     >
                       <span
                         style={{

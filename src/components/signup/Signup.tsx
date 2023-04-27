@@ -59,7 +59,7 @@ const Signup = ({}: any) => {
             >
               {content.register}
             </h4>
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <div style={{ display: "flex", justifyContent: "flex-end", paddingRight: "1rem" }}>
               <TranslationComp />
             </div>
             <div className="form-group">
@@ -96,6 +96,13 @@ const Signup = ({}: any) => {
               className="btn btn-primary mt-4  w-100"
             >
               {content.submit}
+            </button>
+            <button
+              type="submit"
+              id="register-btn"
+              className="btn btn-primary mt-4  w-100"
+            >
+              შესვლა როგორც სტუმარი
             </button>
           </>
         )}

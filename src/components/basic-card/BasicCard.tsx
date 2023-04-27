@@ -78,26 +78,31 @@ export default function BasicCard() {
               alignItems: "center",
               justifyContent: "center",
               marginBottom: "1.5rem",
-              marginTop: "20px"
+              marginTop: "20px",
             }}
           >
-            <BiSearch size={20} style={{position: "relative", left: "30px", top: "1.9px"}}/>
+            <BiSearch
+              size={20}
+              style={{ position: "relative", left: "50px", top: "1.9px" }}
+            />
             <input
               autoFocus={true}
               placeholder={content.search}
               type="text"
               onChange={(e) => handleFilter(e.target.value)}
               style={{
-                maxWidth: "400px",
+                maxWidth: "550px",
                 width: "100%",
                 outline: "none",
                 border: "1px solid #d3cece",
-                paddingBlock: "0.34rem",
-                paddingLeft: "2.3rem"
+                paddingBlock: "0.8rem",
+                paddingLeft: "3.6rem",
+                borderRadius: "30px"
               }}
             />
           </div>
           <h5
+          className="smartphones-page-title"
             style={{
               textAlign: "center",
               marginBottom: "1.5rem",
@@ -119,7 +124,7 @@ export default function BasicCard() {
                   <CardMedia
                     component="img"
                     alt="green iguana"
-                    height="81px"
+                    height="100px"
                     image={phone?.image}
                     id="basic-card-img"
                     style={{ objectFit: "contain" }}
@@ -129,7 +134,11 @@ export default function BasicCard() {
                       gutterBottom
                       variant="h6"
                       component="div"
-                      style={{ width: "100%", fontSize: "0.9rem" }}
+                      style={{
+                        width: "100%",
+                        fontSize: "0.8rem",
+                        fontWeight: "bold",
+                      }}
                     >
                       {content.brand}:{" "}
                       <span style={{ color: "#172585" }}>{phone.brand}</span>
@@ -138,21 +147,38 @@ export default function BasicCard() {
                       gutterBottom
                       variant="h6"
                       component="div"
-                      style={{ width: "100%", fontSize: "0.9rem" }}
-                    >
-                      {content.price}:{" "}
-                      <span style={{ color: "#f0120e" }}>$ {phone.price}</span>
-                    </Typography>
-                    <li
                       style={{
+                        width: "100%",
                         fontSize: "0.8rem",
-                        listStyle: "none",
-                        padding: "0 3px",
+                        fontWeight: "bold",
                       }}
                     >
-                      <strong>{content.model}:</strong>{" "}
-                      <span style={{ fontWeight: "600" }}>{phone.model}</span>
-                    </li>
+                      {content.price}:{" "}
+                      <span style={{ color: "#28a745" }}>${phone.price}</span>
+                      &nbsp;
+                      <span
+                        style={{
+                          color: "#e31f1f",
+                          textDecorationLine: "line-through",
+                        }}
+                      >
+                        ${phone.old_price}
+                      </span>
+                    </Typography>
+
+                    <Typography
+                      gutterBottom
+                      variant="h6"
+                      component="div"
+                      style={{
+                        width: "100%",
+                        fontSize: "0.8rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {content.model}: <span>{phone.model}</span>
+                      &nbsp;
+                    </Typography>
                   </CardContent>
                   <CardActions
                     style={{
@@ -165,6 +191,7 @@ export default function BasicCard() {
                         brand: phone?.brand,
                         model: phone?.model,
                         price: phone?.price,
+                        old_price: phone?.old_price,
                         image: phone?.image,
                         resolution: phone?.resolution,
                         ram_memory: phone?.ram_memory,
@@ -177,10 +204,7 @@ export default function BasicCard() {
                       to={"/smartphones-details"}
                       onClick={() => window.scrollTo(0, 0)}
                     >
-                      <Button
-                        size="small"
-                        style={{ background: "#343a40", borderRadius: "100px" }}
-                      >
+                      <Button className="left-btn" size="small">
                         <span
                           style={{
                             color: "#FFFFFF",
@@ -194,8 +218,8 @@ export default function BasicCard() {
                       </Button>
                     </NavLink>
                     <Button
+                      className="right-btn"
                       size="small"
-                      style={{ background: "#0073e6", borderRadius: "100px" }}
                       onClick={() => {
                         handleAdd(phone);
                         setOpen(true);

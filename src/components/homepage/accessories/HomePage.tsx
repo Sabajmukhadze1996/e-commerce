@@ -5,6 +5,7 @@ import "./Accessories.css";
 import WatchesCard from "../watches/WatchesCard";
 import PhotographyCard from "../photography/PhotographyCard";
 
+
 const HomePage = () => {
   const { content } = useContext(Translation);
 
@@ -30,9 +31,11 @@ const HomePage = () => {
           <div className="spinner-grow text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
+          &nbsp;&nbsp;&nbsp;
           <div className="spinner-grow text-secondary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
+          &nbsp;&nbsp;&nbsp;
           <div className="spinner-grow text-success" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
@@ -45,6 +48,7 @@ const HomePage = () => {
           }}
         >
           <h5
+          className="home-page-title"
             style={{
               color: "brown",
               marginBottom: "1.1rem",
@@ -58,6 +62,7 @@ const HomePage = () => {
           </div>
 
           <h5
+          className="home-page-title"
             style={{
               color: "brown",
               marginBottom: "1.1rem",
@@ -72,6 +77,7 @@ const HomePage = () => {
           </div>
 
           <h5
+          className="home-page-title"
             style={{
               color: "brown",
               marginBottom: "1.1rem",

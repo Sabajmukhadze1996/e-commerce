@@ -39,7 +39,7 @@ const Navbar = () => {
               <span>SJ's commerce</span>
             </NavLink>
             <div id="cart-container" onClick={handleOpen}>
-              <AiOutlineShoppingCart id="cart" fill="#ffffff" />
+              <AiOutlineShoppingCart id="cart" fill="#fff" />
               <Badge
                 style={{ position: "absolute" }}
                 badgeContent={products.length}
@@ -51,7 +51,7 @@ const Navbar = () => {
             </div>
             &nbsp;
             <div className="user-container">
-              <FaUserCircle onClick={handleOpenUserModal} id="navbar-user-icon" size={33} color="#e6e6e6" />
+              <FaUserCircle onClick={handleOpenUserModal} id="navbar-user-icon" size={33} color="#fff" />
             </div>
             <CartModal open={open} handleClose={handleClose} />
           </div>

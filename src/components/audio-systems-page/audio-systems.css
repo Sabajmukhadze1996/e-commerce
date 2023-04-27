@@ -1,13 +1,29 @@
+@font-face {
+  font-family: nav-font;
+  src: url("../../fonts/bpgmrgvlovani.woff");
+}
+
+.audio-systems-title {
+  font-family: nav-font;
+  color: orange !important;
+}
+
+
+
+
 .audio-systems-card-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(4, 320px);
     row-gap: 2rem;
     column-gap: 2rem;
     justify-content: center;
   }
 
-  #basic-card-img:hover {
+
+  
+
+  #audio-systems-card-img:hover {
     transform: scale(1.07);
     cursor: pointer;
     transition: 0.25s ease-in;
@@ -18,50 +34,136 @@
     padding-bottom: 11px !important;
     padding-top: 11px !important;
   }
+
+  #audio-systems-card * {
+    font-family: nav-font;
+  }
+
+  #audio-systems-card {
+    width: 320px !important;
+    padding-bottom: 18px !important;
+    padding-top: 11px !important;
+    box-shadow: 0px 0px 5px rgb(213, 198, 198);
+    cursor: pointer;
+  }
+  #audio-systems-card:hover {
+    box-shadow: 0px 0px 20px rgb(219, 208, 208);
+    transition: 0.5s ease;
+  }
+
+
+
+  #audio-systems-card button {
+    width: 120px !important;
+    height: 2.2rem !important;
+  }
   
-  @media (max-width: 1251px) {
+  #audio-systems-card .left-btn {
+    border-radius: 100px !important;
+    background-color: #212529 !important;
+  }
+  
+  #audio-systems-card .left-btn:hover {
+    background-color: #139844 !important;
+    transition: 0.3s ease !important;
+  }
+  
+  #audio-systems-card .right-btn {
+    border-radius: 100px !important;
+    background-color: #5039fc !important;
+  }
+  #audio-systems-card .right-btn:hover {
+    background-color: #fb3030 !important;
+    transition: 0.3s ease !important;
+  }
+  
+  #audio-systems-card button * {
+    font-size: 0.6rem !important;
+    line-height: 14.5px !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @media (max-width: 1397px) {
     .audio-systems-card-container {
-      grid-template-columns: repeat(3, 250px);
+      grid-template-columns: repeat(3, 320px);
       row-gap: 2rem;
       column-gap: 5rem;
     }
   }
   
-  @media (max-width: 935px) {
+  @media (max-width: 1150px) {
     .audio-systems-card-container {
-      grid-template-columns: repeat(3, 250px);
+      grid-template-columns: repeat(3, 320px);
       row-gap: 2rem;
       column-gap: 2.5rem;
     }
   }
   
-  @media (max-width: 843px) {
+  @media (max-width: 1071px) {
     .audio-systems-card-container {
-      grid-template-columns: repeat(2, 250px);
+      grid-template-columns: repeat(2, 320px);
       row-gap: 2rem;
       column-gap: 5.5rem;
-    }
-  }
-  @media (max-width: 629px) {
-    .audio-systems-card-container {
-      grid-template-columns: repeat(1, 250px);
-      row-gap: 2rem;
-      column-gap: 5.5rem;
-      justify-items: center;
-    }
-    #audio-systems-card {
-      width: 400px !important;
-    }
-  }
-  @media (max-width: 423px) {
-    .audio-systems-card-container {
-      grid-template-columns: repeat(1, 250px);
-      row-gap: 2rem;
-      column-gap: 5.5rem;
-      justify-items: center;
-    }
-    #audio-systems-card {
-      width: 300px !important;
     }
   }
   
+  @media (max-width: 768px) {
+  .audio-systems-card-container  {
+    column-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 701px) {
+  .audio-systems-card-container{
+    grid-template-columns: repeat(1, 320px);
+    row-gap: 2rem;
+    column-gap: 5.5rem;
+    justify-items: center;
+  }
+  #basic-card {
+    width: 400px !important;
+  }
+}
+@media (max-width: 423px) {
+  .audio-systems-card-container{
+    grid-template-columns: repeat(1, 320px);
+    row-gap: 2rem;
+    column-gap: 5.5rem;
+    justify-items: center;
+  }
+  #audio-systems-card {
+    width: 300px !important;
+  }
+}

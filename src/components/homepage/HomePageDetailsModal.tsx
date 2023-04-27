@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Translation } from "../../translation/TranslationContextProvider";
-import { MdDone } from "react-icons/md";
 
 const style = {
   position: "absolute" as "absolute",
@@ -35,7 +33,6 @@ export default function HomePageDetailsModal({
   chipset,
   image,
 }: any) {
-
   const { content } = useContext(Translation);
 
   return (
@@ -45,18 +42,35 @@ export default function HomePageDetailsModal({
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-
       <Box sx={style}>
-        <h5>{content.brand}: <span style={{fontWeight: "400"}}>{name}</span></h5>
+        <h5>
+          {content.brand}: <span style={{ fontWeight: "400" }}>{name}</span>
+        </h5>
 
-        <img src={image} alt="product" width={120} height={120}  style={{marginBottom: "0.9rem"}}/>
+        <img
+          src={image}
+          alt="product"
+          width={120}
+          height={120}
+          style={{ marginBottom: "0.9rem" }}
+        />
 
         <ul className="list-group">
           <li className="list-group-item" aria-current="true">
             <strong>{content.model}:</strong> {model}
           </li>
           <li className="list-group-item" aria-current="true">
-            <strong>{content.price}:</strong> <span style={{color: "#28a745"}}>$ {price}</span>&nbsp;&nbsp;<span style={{textDecorationLine: "line-through", fontWeight: "500", color: "#e31f1f",}}>$ {oldPrice}</span> 
+            <strong>{content.price}:</strong>{" "}
+            <span style={{ color: "#28a745" }}>$ {price}</span>&nbsp;&nbsp;
+            <span
+              style={{
+                textDecorationLine: "line-through",
+                fontWeight: "500",
+                color: "#e31f1f",
+              }}
+            >
+              $ {oldPrice}
+            </span>
           </li>
           <li className="list-group-item" aria-current="true">
             <strong>{content.release_year}:</strong> {release_year}
