@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.c8fbde5d.css",
-    "main.js": "/e-commerce/static/js/main.857a5fa7.js",
+    "main.css": "/e-commerce/static/css/main.db1590c3.css",
+    "main.js": "/e-commerce/static/js/main.a707cf0a.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/nikon-z7ii.jpg": "/e-commerce/static/media/nikon-z7ii.88662b816d4028a6304c.jpg",
     "static/media/Bose QuietComfort 35 II Wireless Headphones.webp": "/e-commerce/static/media/Bose QuietComfort 35 II Wireless Headphones.fe6d727a0c3d128de1cb.webp",
@@ -74,11 +74,11 @@
     "static/media/Bose SoundLink Revolve+ II Bluetooth.jpeg": "/e-commerce/static/media/Bose SoundLink Revolve+ II Bluetooth.923423783f27610d597c.jpeg",
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
     "index.html": "/e-commerce/index.html",
-    "main.c8fbde5d.css.map": "/e-commerce/static/css/main.c8fbde5d.css.map",
-    "main.857a5fa7.js.map": "/e-commerce/static/js/main.857a5fa7.js.map"
+    "main.db1590c3.css.map": "/e-commerce/static/css/main.db1590c3.css.map",
+    "main.a707cf0a.js.map": "/e-commerce/static/js/main.a707cf0a.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8fbde5d.css",
-    "static/js/main.857a5fa7.js"
+    "static/css/main.db1590c3.css",
+    "static/js/main.a707cf0a.js"
   ]
 }
