@@ -26,7 +26,7 @@
   border-radius: 8px;
   margin-inline: 0.3rem;
   background-color: #13172a;
-  border: 1px solid rgb(58, 58, 244);
+  border: 1px solid #3a3af4;
 }
 
 .signup-form input {
@@ -39,11 +39,16 @@
   margin-top: 8px;
 }
 
-#register-btn{
+#register-btn {
   padding-block: 0.7rem !important;
   background-color: #15215c !important;
   border: 1px solid rgb(58, 58, 244) !important;
   font-family: nav-font !important;
+  transition: 0.3s ease;
+}
+
+#register-btn:hover {
+  background-color: #1f3187 !important;
 }
 
 #guest-btn {
@@ -51,4 +56,7 @@
   background-color: #15215c !important;
   border: 1px solid rgb(58, 58, 244) !important;
   font-family: nav-font !important;
+}
+#guest-btn:hover {
+  background-color: #1f3187 !important;
 }

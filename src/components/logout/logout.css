@@ -1,0 +1,8 @@
+@font-face {
+    font-family: nav-font;
+    src: url("../../fonts/bpgmrgvlovani.woff");
+}
+
+#logout-modal * {
+    font-family: nav-font !important;
+}

@@ -12,6 +12,7 @@ import AudioSystemsDetailsPage from "./components/audio-systems-details-page/Aud
 import { Footer } from "./components/footer/Footer";
 import Signup from "./components/signup/Signup";
 import { FaUserCircle } from "react-icons/fa";
+import Banks from "./components/banks/Banks";
 
 const App: React.FC = () => {
   const { isSubmitted, userName } = useContext(SignupContext);
@@ -22,6 +23,15 @@ const App: React.FC = () => {
         <div className="app">
           <Navbar />
           <main id="main">
+
+
+
+
+            <Banks />
+
+
+
+
             <Routes>
               <Route>
                 <Route path="/*"  element={<HomePage />} />

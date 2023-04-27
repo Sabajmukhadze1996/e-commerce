@@ -40,13 +40,15 @@ const Signup = ({}: any) => {
               justifyContent: "center",
             }}
           >
-            <div style={{ marginTop: "190px" }}>
+            <div style={{ marginTop: "235px" }}>
               <div className="spinner-grow text-primary" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>
+              &nbsp;&nbsp;
               <div className="spinner-grow text-secondary" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>
+              &nbsp;&nbsp;
               <div className="spinner-grow text-success" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>

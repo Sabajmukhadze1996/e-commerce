@@ -41,7 +41,7 @@ li {
 /* for scroll bar */
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px
 }
 
 ::-webkit-scrollbar-track {
@@ -54,7 +54,7 @@ li {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px
 }
 
 ::-webkit-scrollbar-track {
@@ -67,7 +67,7 @@ li {
 }
 
 ::-ms-scrollbar {
-  width: 8px;
+  width: 7px
 }
 
 ::-ms-scrollbar-track {

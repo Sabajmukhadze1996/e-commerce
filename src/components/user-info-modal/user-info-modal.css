@@ -12,8 +12,9 @@
     font-family: modal-font !important;
     color: #fff;
     text-align: center;
-    margin-top: 3rem;
-    font-size: 1.8rem;
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.6rem;
   }
   
   .close-container {
@@ -45,7 +46,7 @@
     padding: 0.75rem 1.25rem;
     border-bottom: 1px solid #dee2e6;
     font-family: modal-font;
-    color: rgb(5, 5, 44);
+    color: #05052c;
     font-size: 0.9rem;
   }
   

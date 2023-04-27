@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./logout.css"
 import { SignupContext } from "../signup/SignUpContextProvider";
 import { Translation } from "../../translation/TranslationContextProvider";
 
@@ -11,8 +12,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "250px",
-  height: "145px",
+  width: "280px",
+  height: "180px",
   bgcolor: "#FFFFFF",
   boxShadow: 24,
   p: 2,
@@ -48,7 +49,7 @@ const Logout = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} id="logout-modal">
           <Typography
             id="modal-modal-title"
             variant="h6"
@@ -68,6 +69,7 @@ const Logout = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              marginTop: "30px"
             }}
           >
             <button

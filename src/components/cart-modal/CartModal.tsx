@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./cart.css";
 import { Translation } from "../../translation/TranslationContextProvider";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -15,7 +16,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "550px",
+  width: "850px",
+  maxWidth: "97%",
   bgcolor: "#FFFFFF",
   boxShadow: 24,
   p: 2,
@@ -23,9 +25,6 @@ const style = {
   borderRadius: "7px",
   overflowY: "scroll",
   maxHeight: "60vh",
-  "@media (max-width: 585px)": {
-    width: "95%",
-  },
 };
 export default function CartModal({ open, handleClose }: any) {
   const dispatch = useDispatch();
@@ -53,9 +52,10 @@ export default function CartModal({ open, handleClose }: any) {
               justifyContent: "center",
               marginBottom: "2rem",
             }}
+            className="cart-container"
           >
             <h4>{content.my_cart}</h4>
-            &nbsp; &nbsp; 
+            &nbsp; &nbsp;
             <img
               src={ShoppingCart}
               style={{
@@ -73,6 +73,7 @@ export default function CartModal({ open, handleClose }: any) {
                 height: 30,
                 position: "absolute",
                 right: 15,
+                top: 15,
                 cursor: "pointer",
               }}
               alt="close"
@@ -103,19 +104,25 @@ export default function CartModal({ open, handleClose }: any) {
                               <strong>{content.model}: </strong>
                               {product.model}
                             </li>
-                            <li className="list-group-item">
+                            <li className="list-group-item border border-transparent">
                               <strong>{content.price}: </strong>${" "}
                               {product.price}
                             </li>
                           </ul>
-                          <p className="card-text mt-3">
+                          <p className="card-text mt-3 mb-4">
                             <small className="text-muted">
                               {content.update_text} !
                             </small>
                           </p>
                           <button
-                            style={{ borderRadius: "100px", height: "2rem" }}
-                            className="btn btn-danger btn-sm "
+                            style={{
+                              borderRadius: "100px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              height: "2rem",
+                            }}
+                            className="btn btn-danger btn-sm pt-3 pb-3 "
                             onClick={() => handleRemove(product.brand)}
                           >
                             {content.remove_product}
@@ -138,8 +145,13 @@ export default function CartModal({ open, handleClose }: any) {
               }}
             >
               <h6
-                className="text-danger"
-                style={{ borderBottom: "1px solid #dc3545", fontSize: "1rem", paddingBottom: "0.5rem", letterSpacing: "0.8px" }}
+                style={{
+                  color: "orange",
+                  borderBottom: "1px solid orange",
+                  fontSize: "1rem",
+                  paddingBottom: "0.5rem",
+                  letterSpacing: "0.8px",
+                }}
               >
                 {content.cart_is_empty}
               </h6>

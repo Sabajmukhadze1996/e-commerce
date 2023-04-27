@@ -1,0 +1,30 @@
+
+.banks-container *{
+  font-size: 0.8rem !important; 
+}
+.banks-container img {
+  width: 50px;
+  border-radius: 100%;
+  
+}
+
+.banks-container .list-group {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgb(225, 221, 221);
+  transition: 0.3s ease;
+  max-width: 1400px !important;
+  width: 100% !important;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px !important;
+}
+.banks-container .list-group span {
+  padding-block: 0.15rem;
+}
+.banks-container .list-group-item {
+    background-color: transparent !important;
+}
+
+.banks-container .list-group:hover {
+  box-shadow: 0px 0px 10px rgb(194, 190, 190);
+}
