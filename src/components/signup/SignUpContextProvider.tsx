@@ -10,8 +10,9 @@ const SignUpContextProvider = ({ children }: any) => {
   const [passwordErrorText, setPasswordErrorText] = useState("");
   const [formErrorText, setFormErrorText] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isUserGuest, setIsUserGuest] = useState(false);
 
-  const handleSubmit = (event: any) => {
+  let handleSubmit = (event: any) => {
     event.preventDefault();
 
     if (!userName.length && !password.length) {
@@ -31,7 +32,8 @@ const SignUpContextProvider = ({ children }: any) => {
       setPasswordErrorText("");
       setFormErrorText("");
       setIsSubmitted(true);
-      handleRegistration()
+      handleRegistration();
+      registerasGuest();
     }
   };
 
@@ -47,6 +49,18 @@ const SignUpContextProvider = ({ children }: any) => {
 
   const handleRegistration = () => {
     setRegistrationDate(new Date());
+  };
+
+  // register user as a guest
+  const registerasGuest = () => {
+    if (userName.length && password.length) {
+      setIsSubmitted(true);
+      setIsUserGuest(false);
+    }
+    if (!userName.length && !password.length) {
+      setIsSubmitted(true);
+      setIsUserGuest(true);
+    }
   };
 
   const options: Intl.DateTimeFormatOptions = {
@@ -78,6 +92,9 @@ const SignUpContextProvider = ({ children }: any) => {
         formattedDate,
         setIsSubmitted,
         handleSubmit,
+        registerasGuest,
+        isUserGuest,
+        setIsUserGuest,
       }}
     >
       {children}

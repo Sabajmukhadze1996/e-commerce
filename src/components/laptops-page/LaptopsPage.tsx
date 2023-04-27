@@ -121,7 +121,11 @@ export default function LaptopsPage() {
             />
             {filteredData.length > 0 ? (
               filteredData.map((phone: any, index: any) => (
-                <Card id="laptops-card" key={index}>
+                <Card id="laptops-card" key={index}
+                style={{
+                  backgroundColor:
+                    phone.available === "no" ? "#fdf1f2" : "transparent",
+                }}>
                   <CardMedia
                     component="img"
                     alt="green iguana"
@@ -216,25 +220,64 @@ export default function LaptopsPage() {
                         </span>
                       </Button>
                     </NavLink>
-                    <Button
-                      className="right-btn"
-                      size="small"
-                      onClick={() => {
-                        handleAdd(phone);
-                        setOpen(true);
-                      }}
-                    >
-                      <span
-                        style={{
-                          color: "#FFFFFF",
-                          fontSize: "0.65rem",
-                          fontWeight: "600",
-                          padding: "0 3px",
+
+
+
+
+
+
+
+
+
+
+                    {phone.available === "yes" ? (
+                      <Button
+                        className="right-btn"
+                        size="small"
+                        onClick={() => {
+                          handleAdd(phone);
+                          setOpen(true);
                         }}
                       >
-                        {content.add_to_cart}
-                      </span>
-                    </Button>
+                        <span
+                          style={{
+                            color: "#FFFFFF",
+                            fontSize: "0.65rem",
+                            fontWeight: "600",
+                            padding: "0 3px",
+                          }}
+                        >
+                          {content.add_to_cart}
+                        </span>
+                      </Button>
+                    ) : (
+                      <Button
+                        size="small"
+                        style={{ backgroundColor: "#fb3030" }}
+                      >
+                        <span
+                          style={{
+                            color: "#FFFFFF",
+                            fontSize: "0.65rem",
+                            fontWeight: "600",
+                            padding: "0 3px",
+                          }}
+                        >
+                          {content.will_be_added_soon}!
+                        </span>
+                      </Button>
+                    )}
+
+
+
+
+
+
+
+
+
+
+
                   </CardActions>
                 </Card>
               ))

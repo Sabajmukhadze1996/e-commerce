@@ -7,6 +7,14 @@
     display: flex;
     justify-content: center;
   }
+
+  .user-info-modal .guest-title {
+    font-family: modal-font !important;
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
   
   .close-container {
     position: absolute;
@@ -16,6 +24,14 @@
     background: #DC143C;
     cursor: pointer;
     border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+
+  .close-container:hover {
+    
+    background: #940d28;
+
   }
   
   .list-group {

@@ -3,6 +3,7 @@ import { Translation } from "../../translation/TranslationContextProvider";
 import { SignupContext } from "./SignUpContextProvider";
 import "./signup.css";
 import TranslationComp from "../../translation/TranslationComponent";
+import { useNavigate } from "react-router-dom";
 
 const Signup = ({}: any) => {
   const {
@@ -11,6 +12,7 @@ const Signup = ({}: any) => {
     password,
     setPassword,
     handleSubmit,
+    registerasGuest,
     userNameErrorText,
     passwordErrorText,
   } = useContext(SignupContext);
@@ -18,6 +20,8 @@ const Signup = ({}: any) => {
   const { content } = useContext(Translation);
 
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     setTimeout(() => {
@@ -51,6 +55,7 @@ const Signup = ({}: any) => {
         ) : (
           <>
             <h4
+             className="register-title"
               style={{
                 textAlign: "center",
                 color: "#FFFFFF",
@@ -98,11 +103,11 @@ const Signup = ({}: any) => {
               {content.submit}
             </button>
             <button
-              type="submit"
-              id="register-btn"
+            onClick={registerasGuest}
+              id="guest-btn"
               className="btn btn-primary mt-4  w-100"
             >
-              შესვლა როგორც სტუმარი
+              {content.Log_in_as_a_guest}
             </button>
           </>
         )}

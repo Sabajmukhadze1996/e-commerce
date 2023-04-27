@@ -99,12 +99,12 @@ export default function AudioSystemsPage() {
                 border: "1px solid #d3cece",
                 paddingBlock: "0.8rem",
                 paddingLeft: "3.6rem",
-                borderRadius: "30px"
+                borderRadius: "30px",
               }}
             />
           </div>
           <h5
-          className="audio-systems-title"
+            className="audio-systems-title"
             style={{
               textAlign: "center",
               marginBottom: "1.5rem",
@@ -122,7 +122,14 @@ export default function AudioSystemsPage() {
             />
             {filteredData.length > 0 ? (
               filteredData.map((phone: any, index: any) => (
-                <Card id="audio-systems-card" key={index}>
+                <Card
+                  id="audio-systems-card"
+                  style={{
+                    backgroundColor:
+                      phone.available === "no" ? "#fdf1f2" : "transparent",
+                  }}
+                  key={index}
+                >
                   <CardMedia
                     component="img"
                     alt="green iguana"
@@ -178,8 +185,7 @@ export default function AudioSystemsPage() {
                         fontSize: "0.8rem",
                       }}
                     >
-                      {content.model}:{" "}
-                      <span>{phone.model}</span>
+                      {content.model}: <span>{phone.model}</span>
                     </Typography>
                   </CardContent>
                   <CardActions
@@ -220,26 +226,44 @@ export default function AudioSystemsPage() {
                         </span>
                       </Button>
                     </NavLink>
-                    <Button
-                      className="right-btn"
-                      size="small"
-                      style={{ background: "#0073e6", borderRadius: "100px" }}
-                      onClick={() => {
-                        handleAdd(phone);
-                        setOpen(true);
-                      }}
-                    >
-                      <span
-                        style={{
-                          color: "#FFFFFF",
-                          fontSize: "0.65rem",
-                          fontWeight: "600",
-                          padding: "0 3px",
+
+                    {phone.available === "yes" ? (
+                      <Button
+                        className="right-btn"
+                        size="small"
+                        onClick={() => {
+                          handleAdd(phone);
+                          setOpen(true);
                         }}
                       >
-                        {content.add_to_cart}
-                      </span>
-                    </Button>
+                        <span
+                          style={{
+                            color: "#FFFFFF",
+                            fontSize: "0.65rem",
+                            fontWeight: "600",
+                            padding: "0 3px",
+                          }}
+                        >
+                          {content.add_to_cart}
+                        </span>
+                      </Button>
+                    ) : (
+                      <Button
+                        size="small"
+                        style={{ backgroundColor: "#fb3030" }}
+                      >
+                        <span
+                          style={{
+                            color: "#FFFFFF",
+                            fontSize: "0.65rem",
+                            fontWeight: "600",
+                            padding: "0 3px",
+                          }}
+                        >
+                          {content.will_be_added_soon}!
+                        </span>
+                      </Button>
+                    )}
                   </CardActions>
                 </Card>
               ))

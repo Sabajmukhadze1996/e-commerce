@@ -3,8 +3,6 @@
   src: url("../../fonts/bpgmrgvlovani.woff");
 }
 
-
-
 .signup-container {
   width: 100%;
   min-height: 100vh;
@@ -16,15 +14,14 @@
   background-size: cover;
 }
 
-.signup-container * {
+.signup-container .register-title {
   font-family: nav-font !important;
-  
 }
 
 .signup-form {
-  max-width: 480px;
+  max-width: 550px;
   width: 100%;
-  height: 500px;
+  height: 520px;
   padding: 1rem;
   border-radius: 8px;
   margin-inline: 0.3rem;
@@ -34,10 +31,24 @@
 
 .signup-form input {
   padding-block: 0.6rem;
+  font-family: nav-font !important;
 }
 
-#register-btn {
+.signup-form label {
+  font-family: nav-font !important;
+  margin-top: 8px;
+}
+
+#register-btn{
   padding-block: 0.7rem !important;
   background-color: #15215c !important;
   border: 1px solid rgb(58, 58, 244) !important;
+  font-family: nav-font !important;
+}
+
+#guest-btn {
+  padding-block: 0.7rem !important;
+  background-color: #15215c !important;
+  border: 1px solid rgb(58, 58, 244) !important;
+  font-family: nav-font !important;
 }

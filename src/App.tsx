@@ -24,7 +24,7 @@ const App: React.FC = () => {
           <main id="main">
             <Routes>
               <Route>
-                <Route path="/*" element={<HomePage />} />
+                <Route path="/*"  element={<HomePage />} />
               </Route>
 
               <Route>
