@@ -19,9 +19,9 @@
   border-radius: 6px;
   transition: 0.3s ease;
   cursor: pointer;
-  max-width: 1443px;
+  max-width: 1410px;
   width: 100%;
-  margin: 0 0px 40px auto;
+  margin: 0 auto 40px;
 }
 
 .banks-container:hover {
