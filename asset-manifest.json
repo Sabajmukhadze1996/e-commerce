@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.21b41bf0.css",
+    "main.css": "/e-commerce/static/css/main.6ad948a7.css",
     "main.js": "/e-commerce/static/js/main.c99fc4d4.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/nikon-z7ii.jpg": "/e-commerce/static/media/nikon-z7ii.88662b816d4028a6304c.jpg",
@@ -75,11 +75,11 @@
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
     "static/media/procredit-bank-img.png": "/e-commerce/static/media/procredit-bank-img.c11b90be645d0a98d046.png",
     "index.html": "/e-commerce/index.html",
-    "main.21b41bf0.css.map": "/e-commerce/static/css/main.21b41bf0.css.map",
+    "main.6ad948a7.css.map": "/e-commerce/static/css/main.6ad948a7.css.map",
     "main.c99fc4d4.js.map": "/e-commerce/static/js/main.c99fc4d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.21b41bf0.css",
+    "static/css/main.6ad948a7.css",
     "static/js/main.c99fc4d4.js"
   ]
 }
