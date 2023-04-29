@@ -1,30 +1,81 @@
-
-.banks-container *{
-  font-size: 0.8rem !important; 
-}
-.banks-container img {
-  width: 50px;
-  border-radius: 100%;
-  
+@font-face {
+  font-family: bank-font;
+  src: url(".././../fonts/bpgmrgvlovani.woff");
 }
 
-.banks-container .list-group {
-  cursor: pointer;
-  box-shadow: 0px 0px 5px rgb(225, 221, 221);
+.banks-container * {
+  font-family: bank-font;
+  font-size: 0.83rem;
+}
+
+.banks-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 13px;
+  box-shadow: 0px 0px 15px rgb(212, 205, 205);
+  padding-inline: 0.6rem;
+  background-color: #fafafa;
+  border-radius: 6px;
   transition: 0.3s ease;
-  max-width: 1400px !important;
-  width: 100% !important;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 30px !important;
-}
-.banks-container .list-group span {
-  padding-block: 0.15rem;
-}
-.banks-container .list-group-item {
-    background-color: transparent !important;
+  cursor: pointer;
+  max-width: 1443px;
+  width: 100%;
+  margin: 0 0px 40px auto;
 }
 
-.banks-container .list-group:hover {
-  box-shadow: 0px 0px 10px rgb(194, 190, 190);
+.banks-container:hover {
+  box-shadow: 0px 0px 15px rgb(192, 188, 188);
+}
+
+.banks-container img {
+  width: 120px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.first-cont,
+.second-cont,
+.third-cont {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+@media (max-width: 929px) {
+  .banks-container {
+    flex-direction: column;
+  }
+  .third-cont span {
+    bottom: 10px;
+    position: relative;
+  }
+  .first-cont,
+  .second-cont,
+  .third-cont {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1225px) {
+  .third-cont img {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 967px) {
+  .third-cont img {
+    margin-bottom: 20px;
+  }
+}
+
+#banks-modal {
+  font-family: bank-font;
+}
+
+#banks-modal h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #fff;
+  line-height: 2.55rem;
 }

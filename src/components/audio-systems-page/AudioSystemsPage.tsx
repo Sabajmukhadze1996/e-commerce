@@ -100,6 +100,7 @@ export default function AudioSystemsPage() {
                 paddingBlock: "0.8rem",
                 paddingLeft: "3.6rem",
                 borderRadius: "30px",
+                backgroundColor: "#fafafa",
               }}
             />
           </div>

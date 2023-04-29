@@ -98,7 +98,8 @@ export default function LaptopsPage() {
                 border: "1px solid #d3cece",
                 paddingBlock: "0.8rem",
                 paddingLeft: "3.6rem",
-                borderRadius: "30px"
+                borderRadius: "30px",
+                backgroundColor: "#fafafa",
               }}
             />
           </div>
