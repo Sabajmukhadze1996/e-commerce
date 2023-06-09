@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.6ad948a7.css",
-    "main.js": "/e-commerce/static/js/main.c99fc4d4.js",
+    "main.css": "/e-commerce/static/css/main.6779b247.css",
+    "main.js": "/e-commerce/static/js/main.033c7078.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/nikon-z7ii.jpg": "/e-commerce/static/media/nikon-z7ii.88662b816d4028a6304c.jpg",
     "static/media/Bose QuietComfort 35 II Wireless Headphones.webp": "/e-commerce/static/media/Bose QuietComfort 35 II Wireless Headphones.fe6d727a0c3d128de1cb.webp",
@@ -41,6 +41,7 @@
     "static/media/canon-eos-r6.jpeg": "/e-commerce/static/media/canon-eos-r6.0599f276a8cb1f104c1d.jpeg",
     "static/media/Lenovo V15 Gen 2 82KB003CRU.jpeg": "/e-commerce/static/media/Lenovo V15 Gen 2 82KB003CRU.c50b665bb324e8fd8f68.jpeg",
     "static/media/JBL BoomBox.png": "/e-commerce/static/media/JBL BoomBox.1484c6c4a88413a7252f.png",
+    "static/media/ge.jpg": "/e-commerce/static/media/ge.59d52b3b25ab07986f98.jpg",
     "static/media/SONY SRS-XB12.webp": "/e-commerce/static/media/SONY SRS-XB12.f2d208123988f5c4256d.webp",
     "static/media/OnePlus Nord CE.jpeg": "/e-commerce/static/media/OnePlus Nord CE.90ab392417d13284f7e0.jpeg",
     "static/media/Xiaomi Mi Outdoor Speaker Blue GL MP QBH4197GL Blue.jpeg": "/e-commerce/static/media/Xiaomi Mi Outdoor Speaker Blue GL MP QBH4197GL Blue.3e649da229aa3873497b.jpeg",
@@ -75,11 +76,11 @@
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
     "static/media/procredit-bank-img.png": "/e-commerce/static/media/procredit-bank-img.c11b90be645d0a98d046.png",
     "index.html": "/e-commerce/index.html",
-    "main.6ad948a7.css.map": "/e-commerce/static/css/main.6ad948a7.css.map",
-    "main.c99fc4d4.js.map": "/e-commerce/static/js/main.c99fc4d4.js.map"
+    "main.6779b247.css.map": "/e-commerce/static/css/main.6779b247.css.map",
+    "main.033c7078.js.map": "/e-commerce/static/js/main.033c7078.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ad948a7.css",
-    "static/js/main.c99fc4d4.js"
+    "static/css/main.6779b247.css",
+    "static/js/main.033c7078.js"
   ]
 }
