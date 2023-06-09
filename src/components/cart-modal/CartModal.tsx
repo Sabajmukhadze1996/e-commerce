@@ -36,6 +36,7 @@ export default function CartModal({ open, handleClose }: any) {
   const { content } = useContext(Translation);
 
   
+  
   let totalPrice: any = 0;
 
   products.forEach((prod: any) => {
