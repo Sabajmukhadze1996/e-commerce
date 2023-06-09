@@ -8,7 +8,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #212529;
+  background-color: #fff;
   box-shadow: 0px 0px 10px 5px rgb(227, 219, 219);
   padding-block: 1rem;
   padding-inline: 2rem;
@@ -46,21 +46,12 @@ nav .inner-container {
   color: #e6e6e6;
 }
 
-.logo-text {
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
-}
+
 .logo-text:hover {
-  color: #fff;
+  color: #434343;
 }
 
-.logo-text a.active {
-  color: #e6e6e6;
-}
-.logo-text a:hover {
-  color: #e6e6e6;
-}
+
 
 .nav-links {
   list-style: none;
@@ -74,21 +65,19 @@ nav .inner-container {
 }
 
 .nav-links li a {
-  color: #fff;
+  color: #565656;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight:500;
   font-family: nav-font;
   padding-bottom: 4px;
   margin-top: 4px;
   letter-spacing: 0.5px;
 }
-.nav-links li a:hover {
-  color: #ffbd07;
-}
+
 
 .nav-links li a.active {
-  color: #ffbd07;
+  border-bottom: 1px solid #565656;
 }
 
 .nav-icons {
@@ -116,16 +105,10 @@ nav .inner-container {
 
 @media (max-width: 1098px) {
   .nav-links li a {
-    font-size: 14px;
+    font-size: 12px;
   }
 
-  .logo-text {
-    font-size: 25px;
-  }
 
-  #cart {
-    font-size: 25px !important;
-  }
 
   .nav-icons button {
     color: #fff;
@@ -142,40 +125,24 @@ nav .inner-container {
   }
 }
 
-@media (max-width: 993px) {
-  .nav-links li a {
-    font-size: 13px;
-  }
 
-  .logo-text {
-    font-size: 18px;
-  }
 
-  #cart {
-    font-size: 25px !important;
-  }
-
-  .nav-icons button {
-    color: #fff;
-    border: none;
-    padding: 5.5px 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-left: 20px;
-  }
-
-  #nav-cart-badge {
-    top: 14px;
-  }
-}
-
-@media (max-width: 914px) {
+@media (max-width: 1010px) {
   .logo {
     position: absolute;
-    top: 20px;
+    top: 32px !important;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .nav-icons {
+    top: 9px !important;
+    position: absolute;
+    right: 0px;
+  }
+
+  nav {
+    padding-top: 1.4rem;
   }
 
   .logo-text {
@@ -198,18 +165,15 @@ nav .inner-container {
     margin-top: 2.5rem;
   }
 
-  nav {
-    height: 93px;
-  }
+
   #nav-cart-badge {
     margin-top: -13px;
   }
 }
 
-@media (max-width: 649px) {
+@media (max-width: 610px) {
   .logo {
     position: absolute;
-    top: 20px;
     left: 180px;
   }
   .nav-links {
@@ -239,11 +203,11 @@ nav .inner-container {
     margin-top: 3rem;
   }
 
-  .nav-links li a {
+  /* .nav-links li a {
     font-size: 0.8rem;
     width: 130px;
     border-bottom: none;
-  }
+  } */
   .nav-links li {
     transform: translateX(-64.8px);
   }

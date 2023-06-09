@@ -8,6 +8,13 @@
     justify-content: center;
   }
 
+  
+  .user-info-modal {
+    backdrop-filter: blur(3px) !important;
+    background-color: #13172aee !important;
+  }
+
+
   .user-info-modal .guest-title {
     font-family: modal-font !important;
     color: #fff;

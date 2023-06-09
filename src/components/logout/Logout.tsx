@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./logout.css"
+import "./logout.css";
 import { SignupContext } from "../signup/SignUpContextProvider";
 import { Translation } from "../../translation/TranslationContextProvider";
 
@@ -36,8 +36,18 @@ const Logout = () => {
   return (
     <div>
       <button
-        style={{ fontSize: "0.58rem", fontWeight: 600 }}
-        className="btn btn-danger btn-sm float-end"
+        style={{
+          fontSize: "10px",
+          fontWeight: 600,
+          paddingBlock: "0.4rem",
+          width: "70px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          letterSpacing: "0.5px"
+        }}
+        className="btn btn-danger "
         onClick={handleOpen}
       >
         {content.signout}
@@ -69,7 +79,7 @@ const Logout = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              marginTop: "30px"
+              marginTop: "30px",
             }}
           >
             <button

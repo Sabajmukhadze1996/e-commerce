@@ -21,7 +21,6 @@ const style = {
   borderRadius: "7px",
   padding: "0px",
   paddingTop: "0.6rem",
-  backgroundColor: "#13172a",
 };
 
 export default function UserInfoModal({

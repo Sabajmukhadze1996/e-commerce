@@ -22,7 +22,6 @@ const style = {
 export default function HomePageDetailsModal({
   open,
   setOpen,
-  handleCloseCartAddedModal,
   name,
   model,
   price,
@@ -38,7 +37,7 @@ export default function HomePageDetailsModal({
   return (
     <Modal
       open={open}
-      onClose={handleCloseCartAddedModal}
+      onClose={() => setOpen(false)}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >

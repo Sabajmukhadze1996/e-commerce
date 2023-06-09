@@ -5,4 +5,14 @@
 
 .cart-container * {
     font-family: nav-font !important;
+    
+}
+
+
+.cart-container-total-price {
+   padding-bottom: 1rem;
+}
+
+.cart-container-total-price  span {
+    color: rgb(29, 171, 29);
 }

@@ -3,8 +3,6 @@ import "./cart.css";
 import { Translation } from "../../translation/TranslationContextProvider";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { GrClose } from "react-icons/gr";
 import closeIcon from "../../images/icons8-cancel-50.png";
 import ShoppingCart from "../../images/icons8-shopping-cart-64.png";
 
@@ -24,8 +22,9 @@ const style = {
   outline: "none",
   borderRadius: "7px",
   overflowY: "scroll",
-  maxHeight: "60vh",
+  maxHeight: "70vh",
 };
+
 export default function CartModal({ open, handleClose }: any) {
   const dispatch = useDispatch();
   const products = useSelector((state: any) => state.cart);
@@ -35,6 +34,15 @@ export default function CartModal({ open, handleClose }: any) {
   };
 
   const { content } = useContext(Translation);
+
+  
+  let totalPrice: any = 0;
+
+  products.forEach((prod: any) => {
+    if (prod?.price && !isNaN(prod?.price)) {
+     return totalPrice += parseFloat(prod?.price);
+    }
+  });
 
   return (
     <div>
@@ -79,7 +87,9 @@ export default function CartModal({ open, handleClose }: any) {
               alt="close"
             />
           </div>
-
+            <h5 className="cart-container-total-price">
+              {content.full_price}: <span>{totalPrice} $</span> 
+            </h5>
           {products.length > 0 ? (
             products.map((product: any, index: any) => {
               return (

@@ -21,13 +21,13 @@ body {
 #main {
   flex: 1;
   padding: 1.4rem 1.65rem;
-  padding-top: 9rem;
+  padding-top: 7.5rem;
 }
 
-@media (max-width: 649px) {
-  #main {
-    margin-top: 50px;
-  }
+@media(max-width: 610px) {
+#main {
+  padding-top:13rem;
+}
 }
 
 a {

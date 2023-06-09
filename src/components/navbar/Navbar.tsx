@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { SignupContext } from "../signup/SignUpContextProvider";
 import "./navbar.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Badge from "@material-ui/core/Badge";
 import CartModal from "../cart-modal/CartModal";
+import { GiAbstract082 } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import TranslationComp from "../../translation/TranslationComponent";
@@ -24,22 +25,29 @@ const Navbar = () => {
   const handleOpenUserModal = () => setOpenUserModal(true);
   const handleCloseUserModal = () => setOpenUserModal(false);
 
-
-
+  const [activeNavLink, setActiveNavlink] = useState("active");
 
   const products = useSelector((state: any) => state.cart);
   const { content } = useContext(Translation);
   return (
     <>
-    <UserInfoModal userName={userName} openUserModal={openUserModal} handleCloseUserModal={handleCloseUserModal}/>
+      <UserInfoModal
+        userName={userName}
+        openUserModal={openUserModal}
+        handleCloseUserModal={handleCloseUserModal}
+      />
       <nav>
-        <div className="inner-container">
+        <div className="inner-container px-5">
           <div className="logo">
             <NavLink className="logo-text" to="/">
-              <span>SJ's commerce</span>
+              <GiAbstract082
+                style={{ position: "relative", bottom: "5px" }}
+                size={50}
+                fill="orange"
+              />
             </NavLink>
             <div id="cart-container" onClick={handleOpen}>
-              <AiOutlineShoppingCart id="cart" fill="#fff" />
+              <AiOutlineShoppingCart size={27} id="cart" fill="#434343" />
               <Badge
                 style={{ position: "absolute" }}
                 badgeContent={products.length}
@@ -51,7 +59,12 @@ const Navbar = () => {
             </div>
             &nbsp;
             <div className="user-container">
-              <FaUserCircle onClick={handleOpenUserModal} id="navbar-user-icon" size={33} color="#fff" />
+              <FaUserCircle
+                onClick={handleOpenUserModal}
+                id="navbar-user-icon"
+                size={27}
+                color="#434343"
+              />
             </div>
             <CartModal open={open} handleClose={handleClose} />
           </div>
@@ -59,22 +72,40 @@ const Navbar = () => {
           <ul className="nav-links">
             <li>
               {" "}
-              <NavLink className="nav-link " to="/">
+              <NavLink className={activeNavLink} to="/">
                 {content.home}
               </NavLink>
             </li>
             <li>
-              <NavLink className="nav-link " to="/smartphones">
+              <NavLink
+                onClick={() => {
+                  setActiveNavlink("");
+                }}
+                className="nav-link "
+                to="/smartphones"
+              >
                 {content.smartphones}
               </NavLink>
             </li>
             <li>
-              <NavLink className="nav-link " to="/laptops-page">
+              <NavLink
+                onClick={() => {
+                  setActiveNavlink("");
+                }}
+                className="nav-link "
+                to="/laptops-page"
+              >
                 {content.laptops}
               </NavLink>
             </li>
             <li>
-              <NavLink className="nav-link " to="/audio-systems">
+              <NavLink
+                onClick={() => {
+                  setActiveNavlink("");
+                }}
+                className="nav-link "
+                to="/audio-systems"
+              >
                 {content.audio_systems}
               </NavLink>
             </li>
