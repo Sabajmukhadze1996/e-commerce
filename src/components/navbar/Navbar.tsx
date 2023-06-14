@@ -4,7 +4,7 @@ import "./navbar.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Badge from "@material-ui/core/Badge";
 import CartModal from "../cart-modal/CartModal";
-import { GiAbstract082 } from "react-icons/gi";
+import { SiAdobecreativecloud } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import TranslationComp from "../../translation/TranslationComponent";
@@ -40,16 +40,15 @@ const Navbar = () => {
         <div className="inner-container px-5">
           <div className="logo">
             <NavLink className="logo-text" to="/">
-              <GiAbstract082
+              <SiAdobecreativecloud
                 style={{ position: "relative", bottom: "5px" }}
                 size={50}
-                fill="orange"
+                fill="#fff"
               />
             </NavLink>
             <div id="cart-container" onClick={handleOpen}>
-              <AiOutlineShoppingCart size={27} id="cart" fill="#434343" />
+              <AiOutlineShoppingCart size={29} id="cart" fill="#fff" />
               <Badge
-                style={{ position: "absolute" }}
                 badgeContent={products.length}
                 color="error"
                 hidden={false}
@@ -63,7 +62,7 @@ const Navbar = () => {
                 onClick={handleOpenUserModal}
                 id="navbar-user-icon"
                 size={27}
-                color="#434343"
+                color="#fff"
               />
             </div>
             <CartModal open={open} handleClose={handleClose} />

@@ -8,11 +8,13 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px 5px rgb(227, 219, 219);
-  padding-block: 1rem;
+  background-color: #181b1f;
+  background-color: #181b1f;
+  box-shadow: 0px 0px  10px  rgba(234, 234, 234, 0.859);
+  padding-block: 0.7rem;
   padding-inline: 2rem;
   z-index: 200;
+
 }
 nav * {
   white-space: nowrap;
@@ -43,7 +45,6 @@ nav .inner-container {
   display: flex;
   gap: 1rem;
   align-items: center;
-  color: #e6e6e6;
 }
 
 
@@ -62,22 +63,27 @@ nav .inner-container {
 
 .nav-links li {
   margin-right: 20px;
+  margin-top: 5px;
 }
 
 .nav-links li a {
-  color: #565656;
+  color: #fff !important;
   text-decoration: none;
-  font-size: 13px;
-  font-weight:500;
+  font-size: 12.5px;
+  font-weight:400 ;
   font-family: nav-font;
-  padding-bottom: 4px;
-  margin-top: 4px;
+  padding-bottom: 7px;
+  margin-top: 5px;
   letter-spacing: 0.5px;
 }
 
+.nav-links li a:hover {
+  color: #fff !important;
+}
 
 .nav-links li a.active {
   border-bottom: 1px solid #565656;
+  color: #fff !important;
 }
 
 .nav-icons {
@@ -96,11 +102,15 @@ nav .inner-container {
 }
 
 #nav-cart-badge {
-  top: 27px !important;
+  position: relative;
+  bottom: 10px ;
+  left:6.2px;
 }
 
 #cart {
   font-size: 30px;
+  position: relative;
+  left: 8px;
 }
 
 @media (max-width: 1098px) {
@@ -120,9 +130,7 @@ nav .inner-container {
     margin-left: 20px;
   }
 
-  #nav-cart-badge {
-    top: 25px;
-  }
+ 
 }
 
 
@@ -203,11 +211,7 @@ nav .inner-container {
     margin-top: 3rem;
   }
 
-  /* .nav-links li a {
-    font-size: 0.8rem;
-    width: 130px;
-    border-bottom: none;
-  } */
+
   .nav-links li {
     transform: translateX(-64.8px);
   }
@@ -226,8 +230,7 @@ nav .inner-container {
   }
 
   nav {
-    height: 180px;
-    padding-block: 0px;
+    height: 217px !important;
   }
 }
 

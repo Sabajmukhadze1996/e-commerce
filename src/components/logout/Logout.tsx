@@ -45,7 +45,8 @@ const Logout = () => {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          letterSpacing: "0.5px"
+          letterSpacing: "0.5px",
+          transform: "scale(0.98)",
         }}
         className="btn btn-danger "
         onClick={handleOpen}

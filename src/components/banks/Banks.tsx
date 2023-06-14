@@ -36,7 +36,7 @@ const Banks = () => {
       <div className="banks-container" onClick={() => setModal(true)}>
         <div className="first-cont">
           <img
-            style={{ width: "50px", borderRadius: "100%" }}
+            style={{ width: "45px", borderRadius: "100%" }}
             src={bankOfGeorgiaLogo}
             alt="bank"
           />
