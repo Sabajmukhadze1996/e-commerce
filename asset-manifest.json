@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.5b4fa06f.css",
-    "main.js": "/e-commerce/static/js/main.9e9f7fbc.js",
+    "main.css": "/e-commerce/static/css/main.84ab738b.css",
+    "main.js": "/e-commerce/static/js/main.0a7570c5.js",
     "static/media/Intel UHD Graphics 620.jpeg": "/e-commerce/static/media/Intel UHD Graphics 620.8ec1dd920f72ca28ebf9.jpeg",
     "static/media/nikon-z7ii.jpg": "/e-commerce/static/media/nikon-z7ii.88662b816d4028a6304c.jpg",
     "static/media/Bose QuietComfort 35 II Wireless Headphones.webp": "/e-commerce/static/media/Bose QuietComfort 35 II Wireless Headphones.fe6d727a0c3d128de1cb.webp",
@@ -74,13 +74,12 @@
     "static/media/Xiaomi Mi In-Ear Headphones Basic HSEJ03JY Black.png": "/e-commerce/static/media/Xiaomi Mi In-Ear Headphones Basic HSEJ03JY Black.a912d9c1b4461731222e.png",
     "static/media/Bose SoundLink Revolve+ II Bluetooth.jpeg": "/e-commerce/static/media/Bose SoundLink Revolve+ II Bluetooth.923423783f27610d597c.jpeg",
     "static/media/BOSE SoundSport Wireless Headphones.jpg": "/e-commerce/static/media/BOSE SoundSport Wireless Headphones.e9fb2fb5f3fd17ed4e2e.jpg",
-    "static/media/procredit-bank-img.png": "/e-commerce/static/media/procredit-bank-img.c11b90be645d0a98d046.png",
     "index.html": "/e-commerce/index.html",
-    "main.5b4fa06f.css.map": "/e-commerce/static/css/main.5b4fa06f.css.map",
-    "main.9e9f7fbc.js.map": "/e-commerce/static/js/main.9e9f7fbc.js.map"
+    "main.84ab738b.css.map": "/e-commerce/static/css/main.84ab738b.css.map",
+    "main.0a7570c5.js.map": "/e-commerce/static/js/main.0a7570c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b4fa06f.css",
-    "static/js/main.9e9f7fbc.js"
+    "static/css/main.84ab738b.css",
+    "static/js/main.0a7570c5.js"
   ]
 }
