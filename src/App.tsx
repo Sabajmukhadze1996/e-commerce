@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <div className="app">
           <Navbar />
           <main id="main">
-            <Banks />
+            {/* <Banks /> */}
             <Routes>
               <Route>
                 <Route path="/*"  element={<HomePage />} />

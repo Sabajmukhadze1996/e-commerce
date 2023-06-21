@@ -24,9 +24,15 @@ body {
   padding-top: 7rem;
 }
 
+@media(max-width: 1010px) {
+  #main {
+    padding-top:10rem;
+  }
+  }
+
 @media(max-width: 610px) {
 #main {
-  padding-top:13rem;
+  padding-top:16rem;
 }
 }
 
